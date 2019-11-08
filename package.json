@@ -108,7 +108,6 @@
     "eslint-plugin-promise": "^3.8.0",
     "eslint-plugin-react": "^7.9.1",
     "eslint-plugin-standard": "^3.1.0",
-    "http-proxy-middleware": "^0.18.0",
     "husky": "^0.14.3",
     "less": "3.5.3",
     "less-loader": "^4.1.0",
