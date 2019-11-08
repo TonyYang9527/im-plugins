@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import send from '@/assets/icon/tools/send_button.svg';
+import send from '../../../../assets/icon/tools/send_button.svg';
 import './style.scss';
 
 class Sender extends Component {

@@ -1,8 +1,8 @@
 import { Map } from 'immutable';
-import { MESSAGES_TYPES, MESSAGE_SENDER, MESSAGE_BOX_SCROLL_DURATION } from '@/components/livechat/utils/Msconstants';
-import Message from '@/components/livechat/LiveChat/Conversation/Messages/Message';
-import Snippet from '@/components/livechat/LiveChat/Conversation/Messages/Snippet';
-import QuickButton from '@/components/livechat/LiveChat/Conversation/QuickButtons/QuickButton';
+import { MESSAGES_TYPES, MESSAGE_SENDER, MESSAGE_BOX_SCROLL_DURATION } from '../utils/Msconstants';
+import Message from '../LiveChat/Conversation/Messages/Message';
+import Snippet from '../LiveChat/Conversation/Messages/Snippet';
+import QuickButton from '../LiveChat/Conversation/QuickButtons/QuickButton';
 
 export function createNewMessage(text, sender) {
     return Map({

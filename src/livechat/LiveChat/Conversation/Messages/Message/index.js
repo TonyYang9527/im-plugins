@@ -3,7 +3,7 @@ import markdownIt from 'markdown-it';
 import markdownItSup from 'markdown-it-sup';
 import markdownItSanitizer from 'markdown-it-sanitizer';
 import markdownItLinkAttributes from 'markdown-it-link-attributes';
-import { PROP_TYPES } from '@/components/livechat/utils/Msconstants';
+import { PROP_TYPES } from '../../../../utils/Msconstants';
 import './styles.scss';
 
 class Message extends PureComponent {

@@ -2,8 +2,8 @@ import React from 'react';
 import { observer } from 'mobx-react';
 import PropTypes from 'prop-types';
 import Badge from './Badge';
-import openLauncher from '@assets/icon/tools/launcher_button.svg';
-import close from '@assets/icon/tools/clear-button.svg';
+import openLauncher from '../../../assets/icon/tools/launcher_button.svg';
+import close from '../../../assets/icon/tools/clear-button.svg';
 import './style.scss';
 
 

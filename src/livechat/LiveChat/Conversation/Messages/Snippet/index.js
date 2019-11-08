@@ -1,5 +1,5 @@
 import React, { PureComponent } from 'react';
-import { PROP_TYPES } from '@/components/livechat/utils/Msconstants';
+import { PROP_TYPES } from '../../../../utils/Msconstants';
 import './styles.scss';
 
 class Snippet extends PureComponent {

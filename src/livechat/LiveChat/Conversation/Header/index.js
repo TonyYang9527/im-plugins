@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import close from '@/assets/icon/tools/clear-button.svg';
+import close from '../../../../assets/icon/tools/clear-button.svg';
 import './style.scss';
 
 

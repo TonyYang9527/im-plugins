@@ -38,12 +38,6 @@
     "babel-polyfill": "^6.26.0",
     "babel-preset-stage-0": "^6.24.1",
     "babel-runtime": "^6.26.0",
-    "bmo-form-builder": "latest",
-    "bmo-global": "latest",
-    "bmo-oss": "latest",
-    "bmo-ossCli": "latest",
-    "bmo-rest-client": "latest",
-    "bmo-websocket-client": "latest",
     "classnames": "^2.2.6",
     "flat": "^1.2.1",
     "http-proxy-middleware": "^0.20.0",
@@ -75,7 +69,12 @@
     "string-template": "^1.0.0",
     "styled-components": "^3.2.6",
     "uuid": "^3.3.2",
-    "webpack": "^3.0.0"
+    "webpack": "^3.0.0",
+    "markdown-it": "^8.4.1",
+    "markdown-it-link-attributes": "^2.1.0",
+    "markdown-it-sanitizer": "^0.4.3",
+    "markdown-it-sup": "^1.0.0",
+    "react-immutable-proptypes": "^2.1.0"
   },
   "devDependencies": {
     "@storybook/addon-actions": "3.4.5",
