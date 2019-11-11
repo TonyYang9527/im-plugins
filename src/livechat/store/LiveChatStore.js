@@ -14,7 +14,7 @@ let state = observable({
     msgLoader: false,
     buttons: [],
     //messages: List(),
-    messages:  List([createNewMessage('3344', MESSAGE_SENDER.CLIENT),createNewMessage('Hello', MESSAGE_SENDER.RESPONSE)]),
+    messages:  List([createNewMessage('3344', MESSAGE_SENDER.CLIENT)]),
 });
 
 const actions = {
