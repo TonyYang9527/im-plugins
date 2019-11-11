@@ -4,6 +4,9 @@ import './styles.scss';
 
 class QuickButton extends PureComponent {
   render() {
+
+    console.log("QuickButton ***props********",this.props);
+
     return (
       <button
         className="quick-button"

@@ -9,15 +9,17 @@ import './style.scss';
 const Conversation = props =>
     <div className="rcw-conversation-container">
         <Header
+            store={props.store} 
             title={props.title}
             subtitle={props.subtitle}
             toggleChat={props.toggleChat}
             showCloseButton={props.showCloseButton}
             titleAvatar={props.titleAvatar}
         />
-        <Messages profileAvatar={props.profileAvatar} />
-        <QuickButtons onQuickButtonClicked={props.onQuickButtonClicked} />
+        <Messages   store={props.store}  profileAvatar={props.profileAvatar} />
+        <QuickButtons store={props.store}  onQuickButtonClicked={props.onQuickButtonClicked} />
         <Sender
+            store={props.store} 
             sendMessage={props.sendMessage}
             placeholder={props.senderPlaceHolder}
             disabledInput={props.disabledInput}

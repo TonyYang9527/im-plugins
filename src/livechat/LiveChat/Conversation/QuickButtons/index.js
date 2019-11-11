@@ -21,7 +21,8 @@ class QuickButtons extends Component {
   }
 
   render() {
-    if (!this.props.buttons.size) {
+
+    if (!this.props.store.state.buttons.size) {
       return null;
     }
 
@@ -29,7 +30,7 @@ class QuickButtons extends Component {
       <div className="quick-buttons-container">
         <ul className="quick-buttons">
           {
-            this.props.buttons.map((button, index) =>
+             this.props.store.state.buttons.map((button, index) =>
               <li className="quick-list-button" key={index}>
                 {this.getComponentToRender(button)}
               </li>

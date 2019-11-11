@@ -1,48 +1,45 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import LiveChat from './LiveChat';
+import React, { Component } from 'react';
+import Widget from './widget';
+import LiveChatStore  from '../livechat/store/LiveChatStore';
+import logo from '../logo.svg';
+export default class LiveChatApp extends Component {
 
+  componentDidMount() {
+    LiveChatStore.actions.addResponseMessage('Welcome to this awesome chat!');
+  }
 
-const Widget = props =>
-        <LiveChat 
-            store ={props.store}
-            title={props.title}
-            titleAvatar={props.titleAvatar}
-            subtitle={props.subtitle}
-            handleNewUserMessage={props.handleNewUserMessage}
-            handleQuickButtonClicked={props.handleQuickButtonClicked}
-            senderPlaceHolder={props.senderPlaceHolder}
-            profileAvatar={props.profileAvatar}
-            showCloseButton={props.showCloseButton}
-            fullScreenMode={props.fullScreenMode}
-            badge={props.badge}
-            autofocus={props.autofocus}
-            customLauncher={props.launcher}/> ;
+  handleNewUserMessage = (newMessage) => {    
+    LiveChatStore.actions.toggleMsgLoader();
+    setTimeout(() => {
+      LiveChatStore.actions.toggleMsgLoader();      
+      if (newMessage === 'fruits') {
+        LiveChatStore.actions.setQuickButtons([ { label: 'Apple', value: 'apple' }, { label: 'Orange', value: 'orange' }, { label: 'Pear', value: 'pear' }, { label: 'Banana', value: 'banana' } ]);
+      } else {
+        LiveChatStore.actions.addResponseMessage(newMessage);
+      }
+    }, 100);
+  }
 
-Widget.propTypes = {
-    title: PropTypes.string,
-    titleAvatar: PropTypes.string,
-    subtitle: PropTypes.string,
-    handleNewUserMessage: PropTypes.func.isRequired,
-    handleQuickButtonClicked: PropTypes.func,
-    senderPlaceHolder: PropTypes.string,
-    profileAvatar: PropTypes.string,
-    showCloseButton: PropTypes.bool,
-    fullScreenMode: PropTypes.bool,
-    badge: PropTypes.number,
-    autofocus: PropTypes.bool,
-    launcher: PropTypes.func
-};
+  handleQuickButtonClicked = (e) => {
+    console.log("handleQuickButtonClicked")
+    LiveChatStore.actions.addResponseMessage('Selected ' + e);
+    LiveChatStore.actions.setQuickButtons([]);
+  }
 
-Widget.defaultProps = {
-    title: 'Welcome',
-    subtitle: 'This is your chat subtitle',
-    senderPlaceHolder: 'Type a message...',
-    showCloseButton: true,
-    fullScreenMode: false,
-    badge: 0,
-    autofocus: true
-};
+  render() {
+    return (
+      <Widget
+        store={LiveChatStore}
+        title="Live Chat"
+        subtitle="Asistente virtual"
+        senderPlaceHolder="Escribe aquí ..."
+        profileAvatar={logo}
+        handleNewUserMessage={this.handleNewUserMessage}
+        handleQuickButtonClicked={this.handleQuickButtonClicked}
+        badge={1}
+      />
+    );
+  }
+}
 
-export default Widget;
 

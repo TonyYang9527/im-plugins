@@ -2,9 +2,9 @@ import { observable, action, computed } from 'mobx';
 import {
     createQuickButton, createNewMessage,
     createLinkSnippet, createComponentMessage
-} from '@/components/livechat/utils/messages';
+} from '../utils/messages';
 
-import { MESSAGE_SENDER } from '@/components/livechat/utils/Msconstants';
+import { MESSAGE_SENDER } from '../utils/Msconstants';
 import { List } from 'immutable';
 
 
@@ -42,6 +42,7 @@ const actions = {
 
     toggleWidget: action(() => {
         state.showChat = !state.showChat;
+        console.log("toggleWidget",  state.showChat)
     }),
 
     toggleInputDisabled: action(() => {

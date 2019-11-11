@@ -4,6 +4,8 @@ import './styles.scss';
 
 class Snippet extends PureComponent {
     render() {
+        console.log("Snippet ***props********",this.props);
+
         return (
             <div className="rcw-snippet">
                 <h5 className="rcw-snippet-title">

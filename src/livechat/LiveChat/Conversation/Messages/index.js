@@ -33,7 +33,10 @@ class Messages extends Component {
   }
 
   render() {
-    const { messages, profileAvatar, toggleMsgLoader } = this.props;
+    console.log("******** Messages ********", this.props)
+    const { profileAvatar, store } = this.props;
+    const { messages } = store.state;
+    const { toggleMsgLoader } = store.actions;
     return (
       <div id="messages" className="rcw-messages-container" ref={msg => this.$message = msg}>
         {messages.map((message, index) =>
@@ -45,7 +48,7 @@ class Messages extends Component {
             {this.getComponentToRender(message)}
           </div>
         )}
-        <Loader typing={ toggleMsgLoader} />
+        <Loader typing={toggleMsgLoader} />
       </div>
     );
   }
