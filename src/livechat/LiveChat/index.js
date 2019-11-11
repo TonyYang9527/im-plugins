@@ -17,12 +17,11 @@ class LiveChat extends Component {
     }
 
     handleMessageSubmit = (event) => {
-
-
         console.log("****LiveChat ****handleMessageSubmit *********",event.target.message.value)
         event.preventDefault();
         const userInput = event.target.message.value;
         if (userInput.trim()) {
+            console.log("****LiveChat ****handleMessageSubmit *********",userInput)
             this.props.store.actions.addUserMessage(userInput)
             this.props.handleNewUserMessage(userInput);
         }
@@ -30,6 +29,7 @@ class LiveChat extends Component {
     }
 
     handleQuickButtonClicked = (event, value) => {
+        console.log("****LiveChat ****handleQuickButtonClicked *********",value)
         event.preventDefault();
         if (this.props.handleQuickButtonClicked) {
             this.props.handleQuickButtonClicked(value);

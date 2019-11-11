@@ -1,6 +1,7 @@
 import React, { PureComponent } from 'react';
 import { PROP_TYPES } from '../../../../utils/Msconstants';
 import './styles.scss';
+import { observer } from "mobx-react";
 
 class Snippet extends PureComponent {
     render() {
@@ -25,4 +26,4 @@ Snippet.propTypes = {
     message: PROP_TYPES.SNIPPET
 };
 
-export default Snippet;
+export default observer(Snippet);

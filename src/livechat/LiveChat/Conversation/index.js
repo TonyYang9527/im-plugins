@@ -5,8 +5,10 @@ import Messages from './Messages';
 import Sender from './Sender';
 import QuickButtons from './QuickButtons';
 import './style.scss';
+import { observer } from "mobx-react";
 
-const Conversation = props =>
+
+const Conversation = observer(props =>
     <div className="rcw-conversation-container">
         <Header
             store={props.store} 
@@ -16,7 +18,7 @@ const Conversation = props =>
             showCloseButton={props.showCloseButton}
             titleAvatar={props.titleAvatar}
         />
-        <Messages   store={props.store}  profileAvatar={props.profileAvatar} />
+        <Messages  messages={props.store.state.messages}  store={props.store}  profileAvatar={props.profileAvatar} />
         <QuickButtons store={props.store}  onQuickButtonClicked={props.onQuickButtonClicked} />
         <Sender
             store={props.store} 
@@ -25,7 +27,7 @@ const Conversation = props =>
             disabledInput={props.disabledInput}
             autofocus={props.autofocus}
         />
-    </div>;
+    </div>);
 
 Conversation.propTypes = {
     title: PropTypes.string,

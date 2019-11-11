@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import './styles.scss';
-
+import { observer } from "mobx-react";
 class QuickButton extends PureComponent {
   render() {
 
@@ -23,4 +23,4 @@ QuickButton.propTypes = {
   value: PropTypes.string
 };
 
-export default QuickButton;
+export default observer(QuickButton);

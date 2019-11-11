@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import './styles.scss';
-
+import { observer } from "mobx-react";
 
 const Loader = props => {
 
@@ -22,4 +22,4 @@ Loader.propTypes = {
   typing: PropTypes.bool,
 };
 
-export default Loader; 
+export default observer(Loader); 

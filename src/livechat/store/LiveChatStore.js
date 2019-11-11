@@ -5,22 +5,23 @@ import {
 } from '../utils/messages';
 
 import { MESSAGE_SENDER } from '../utils/Msconstants';
-import { List } from 'immutable';
+import {List} from 'immutable';
 
 
-
-const state = observable({
+let state = observable({
     showChat: false,
     disabledInput: false,
     msgLoader: false,
     buttons: [],
-    messages: List([]),
+    //messages: List(),
+    messages:  List([createNewMessage('3344', MESSAGE_SENDER.CLIENT),createNewMessage('Hello', MESSAGE_SENDER.RESPONSE)]),
 });
 
 const actions = {
 
     addUserMessage: action((text) => {
         state.messages.push(createNewMessage(text, MESSAGE_SENDER.CLIENT))
+        console.log("addUserMessage ",createNewMessage(text, MESSAGE_SENDER.CLIENT))
     }),
 
     addResponseMessage: action((text) => {
@@ -50,7 +51,7 @@ const actions = {
     }),
 
     dropMessages: action(() => {
-        state.messages = List([]);
+        state.messages =List();
     }),
 
     isWidgetOpened: computed(() => {

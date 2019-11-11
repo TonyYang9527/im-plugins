@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import send from '../../../../assets/icon/tools/send_button.svg';
 import './style.scss';
-
+import { observer } from "mobx-react";
 class Sender extends Component {
     input = React.createRef();
 
@@ -33,4 +33,4 @@ Sender.propTypes = {
     autofocus: PropTypes.bool
 };
 
-export default Sender;
+export default observer(Sender);

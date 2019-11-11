@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import ImmutablePropTypes from 'react-immutable-proptypes';
 import './style.scss';
-
+import { observer } from "mobx-react";
 
 class QuickButtons extends Component {
 
@@ -47,4 +47,4 @@ QuickButtons.propTypes = {
 };
 
 
-export default QuickButtons;
+export default observer(QuickButtons);

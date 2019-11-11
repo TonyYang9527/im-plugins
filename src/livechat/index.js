@@ -15,9 +15,11 @@ export default class LiveChatApp extends Component {
       if (newMessage === 'fruits') {
         LiveChatStore.actions.setQuickButtons([ { label: 'Apple', value: 'apple' }, { label: 'Orange', value: 'orange' }, { label: 'Pear', value: 'pear' }, { label: 'Banana', value: 'banana' } ]);
       } else {
-        LiveChatStore.actions.addResponseMessage(newMessage);
+        console.log("addResponseMessage")
+         LiveChatStore.actions.addResponseMessage(newMessage);
       }
-    }, 100);
+    }, 2000);
+    
   }
 
   handleQuickButtonClicked = (e) => {
@@ -30,9 +32,9 @@ export default class LiveChatApp extends Component {
     return (
       <Widget
         store={LiveChatStore}
-        title="Live Chat"
-        subtitle="Asistente virtual"
-        senderPlaceHolder="Escribe aquí ..."
+        title="My awwsome Chat"
+        subtitle="Welcome!"
+        senderPlaceHolder="typing ..."
         profileAvatar={logo}
         handleNewUserMessage={this.handleNewUserMessage}
         handleQuickButtonClicked={this.handleQuickButtonClicked}

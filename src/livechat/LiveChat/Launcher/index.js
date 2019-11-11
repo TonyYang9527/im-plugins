@@ -6,7 +6,6 @@ import openLauncher from '../../../assets/icon/tools/launcher_button.svg';
 import close from '../../../assets/icon/tools/clear-button.svg';
 import './style.scss';
 
-
 const Launcher = observer((props) => {
     console.log("Launcher ***props********", props)
     const { toggle, chatOpened, badge } = props;

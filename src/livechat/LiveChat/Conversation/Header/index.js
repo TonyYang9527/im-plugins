@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { observer } from "mobx-react";
 import close from '../../../../assets/icon/tools/clear-button.svg';
 import './style.scss';
 
@@ -25,4 +26,4 @@ Header.propTypes = {
     showCloseButton: PropTypes.bool,
     titleAvatar: PropTypes.string
 };
-export default Header;
+export default observer(Header);
