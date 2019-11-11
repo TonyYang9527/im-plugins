@@ -2,7 +2,10 @@ import React, { Component } from 'react';
 import Widget from './widget';
 import LiveChatStore  from '../livechat/store/LiveChatStore';
 import logo from '../logo.svg';
-export default class LiveChatApp extends Component {
+import { observer } from "mobx-react";
+
+
+class LiveChatApp extends Component {
 
   componentDidMount() {
     LiveChatStore.actions.addResponseMessage('Welcome to this awesome chat!');
@@ -15,7 +18,6 @@ export default class LiveChatApp extends Component {
       if (newMessage === 'fruits') {
         LiveChatStore.actions.setQuickButtons([ { label: 'Apple', value: 'apple' }, { label: 'Orange', value: 'orange' }, { label: 'Pear', value: 'pear' }, { label: 'Banana', value: 'banana' } ]);
       } else {
-        console.log("addResponseMessage")
          LiveChatStore.actions.addResponseMessage(newMessage);
       }
     }, 2000);
@@ -23,7 +25,6 @@ export default class LiveChatApp extends Component {
   }
 
   handleQuickButtonClicked = (e) => {
-    console.log("handleQuickButtonClicked")
     LiveChatStore.actions.addResponseMessage('Selected ' + e);
     LiveChatStore.actions.setQuickButtons([]);
   }
@@ -44,4 +45,5 @@ export default class LiveChatApp extends Component {
   }
 }
 
+export default  observer(LiveChatApp);
 

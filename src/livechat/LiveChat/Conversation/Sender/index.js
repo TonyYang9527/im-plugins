@@ -11,8 +11,6 @@ class Sender extends Component {
     }
 
     render() {
-        console.log("Sender ***props********",this.props);
-
         const { sendMessage, placeholder, disabledInput, autofocus } = this.props;
         return (
             <form className="rcw-sender" onSubmit={sendMessage}>

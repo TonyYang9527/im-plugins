@@ -7,7 +7,6 @@ import close from '../../../assets/icon/tools/clear-button.svg';
 import './style.scss';
 
 const Launcher = observer((props) => {
-    console.log("Launcher ***props********", props)
     const { toggle, chatOpened, badge } = props;
     return (
         <button type="button" className={chatOpened ? 'rcw-launcher rcw-hide-sm' : 'rcw-launcher'} onClick={toggle}>

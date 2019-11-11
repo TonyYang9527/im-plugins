@@ -7,7 +7,6 @@ import { PROP_TYPES } from '../../../../utils/Msconstants';
 import './styles.scss';
 
 class Message extends PureComponent {
-
     render() {
         console.log("Message ***props********",this.props);
         const sanitizedHTML = markdownIt()

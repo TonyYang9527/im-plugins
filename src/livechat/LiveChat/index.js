@@ -12,7 +12,6 @@ class LiveChat extends Component {
     }
 
     toggleConversation = () => {
-        console.log("****LiveChat ****toggleConversation *********")
         this.props.store.actions.toggleWidget()
     }
 

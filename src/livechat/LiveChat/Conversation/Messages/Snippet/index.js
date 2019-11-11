@@ -5,8 +5,6 @@ import { observer } from "mobx-react";
 
 class Snippet extends PureComponent {
     render() {
-        console.log("Snippet ***props********",this.props);
-
         return (
             <div className="rcw-snippet">
                 <h5 className="rcw-snippet-title">

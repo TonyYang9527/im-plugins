@@ -5,7 +5,6 @@ import { observer } from "mobx-react";
 
 const Loader = props => {
 
-  console.log("Loader ***props********",props)
   return (
     <div className={`loader ${props.typing && 'active'}`}>
       <div className="loader-container">

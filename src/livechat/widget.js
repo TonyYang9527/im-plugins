@@ -1,6 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import LiveChat from './LiveChat';
+import { observer } from "mobx-react";
+
+
 
 const Widget = props =>
     <LiveChat
@@ -43,6 +46,6 @@ Widget.defaultProps = {
     autofocus: true
 };
 
-export default Widget;
+export default observer(Widget);
 
 
