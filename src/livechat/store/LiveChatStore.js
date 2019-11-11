@@ -13,8 +13,8 @@ let state = observable({
     disabledInput: false,
     msgLoader: false,
     buttons: [],
-    //messages: List(),
-    messages:  List([createNewMessage('3344', MESSAGE_SENDER.CLIENT)]),
+    messages:[],
+    //messages:  List([createNewMessage('3344', MESSAGE_SENDER.CLIENT)]),
 });
 
 const actions = {
@@ -51,7 +51,8 @@ const actions = {
     }),
 
     dropMessages: action(() => {
-        state.messages =List();
+       // state.messages =List();
+          state.messages =[];
     }),
 
     isWidgetOpened: computed(() => {
