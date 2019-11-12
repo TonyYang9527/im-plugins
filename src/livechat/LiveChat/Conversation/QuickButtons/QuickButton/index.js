@@ -1,23 +1,23 @@
-import React, { PureComponent } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import './styles.scss';
 import { observer } from "mobx-react";
-class QuickButton extends PureComponent {
-  render() {
-    return (
-      <button
-        className="quick-button"
-        onClick={(event) => this.props.onQuickButtonClicked(event, this.props.button.get('value'))}
-      >
-        {this.props.button.get('label')}
-      </button>
-    )
-  }
-}
+
+
+const QuickButton = observer(props => {
+  console.log("QuickButton ***props********", props);
+  return (
+    <button className="quick-button"
+      onClick={(event) => props.onQuickButtonClicked(event, props.button.get('value'))}
+    >
+      {props.button.get('label')}
+    </button>
+  )
+})
 
 QuickButton.propTypes = {
   label: PropTypes.string,
   value: PropTypes.string
 };
 
-export default observer(QuickButton);
+export default QuickButton; 

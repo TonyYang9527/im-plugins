@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { observer } from "mobx-react";
-import ImmutablePropTypes from 'react-immutable-proptypes';
 import { scrollToBottom } from '../../../utils/messages';
 import Loader from './Loader';
 import './styles.scss';
@@ -21,7 +20,6 @@ class Messages extends Component {
   getComponentToRender = message => {
     console.log("Messages ******** getComponentToRender  message ********", message)
     const ComponentToRender = message.get('component');
-    const previousMessage = this.props.store.state.messages.get()
     if (message.get('type') === 'component') {
       return <ComponentToRender {...message.get('props')} />;
      }
@@ -36,9 +34,9 @@ class Messages extends Component {
   }
 
   render() {
-    const { profileAvatar, store ,messages} = this.props;
-    const { msgLoader } = store.state;
-    const { toggleMsgLoader } = store.actions;
+    const { profileAvatar, store} = this.props;
+    const { msgLoader,messages } = store.state;
+   // const { toggleMsgLoader } = store.actions;
     console.log("Messages <<<<<<<<<<<<<<messages >>>>>>>>>>>>>", messages)
     return (
       <div id="messages" className="rcw-messages-container" ref={msg => this.$message = msg}>
@@ -59,7 +57,6 @@ class Messages extends Component {
 }
 
 Messages.propTypes = {
-  messages: ImmutablePropTypes.listOf(ImmutablePropTypes.map),
   profileAvatar: PropTypes.string
 };
 

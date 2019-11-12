@@ -5,7 +5,7 @@ import Snippet from '../LiveChat/Conversation/Messages/Snippet';
 import QuickButton from '../LiveChat/Conversation/QuickButtons/QuickButton';
 
 export function createNewMessage(text, sender) {
-    return Map({
+    return  Map({
         type: MESSAGES_TYPES.TEXT,
         component: Message,
         text,
@@ -15,7 +15,7 @@ export function createNewMessage(text, sender) {
 }
 
 export function createLinkSnippet(link) {
-    return Map({
+    return  Map({
         type: MESSAGES_TYPES.SNIPPET.LINK,
         component: Snippet,
         title: link.title,

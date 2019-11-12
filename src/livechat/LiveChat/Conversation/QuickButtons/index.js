@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import ImmutablePropTypes from 'react-immutable-proptypes';
-import './style.scss';
+import PropTypes from 'prop-types';
 import { observer } from "mobx-react";
+import './style.scss';
 
 class QuickButtons extends Component {
 
@@ -43,7 +43,7 @@ class QuickButtons extends Component {
 }
 
 QuickButtons.propTypes = {
-  buttons: ImmutablePropTypes.listOf(ImmutablePropTypes.map),
+  buttons: PropTypes.array,
 };
 
 

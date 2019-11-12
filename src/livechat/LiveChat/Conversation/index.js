@@ -18,7 +18,7 @@ const Conversation = observer(props =>
             showCloseButton={props.showCloseButton}
             titleAvatar={props.titleAvatar}
         />
-        <Messages  messages={props.store.state.messages}  store={props.store}  profileAvatar={props.profileAvatar} />
+    <Messages  messages={props.store.state.messages}  store={props.store}  profileAvatar={props.profileAvatar} />
         <QuickButtons store={props.store}  onQuickButtonClicked={props.onQuickButtonClicked} />
         <Sender
             store={props.store} 
