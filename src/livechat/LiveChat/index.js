@@ -5,7 +5,7 @@ import WidgetLayout from './layout';
 
 class LiveChat extends Component {
 
-    componentWillReceiveProps(nextProps) {
+    UNSAFE_componentWillReceiveProps(nextProps) {
         if (nextProps.fullScreenMode) {
             this.props.store.actions.toggleChat()
         }
