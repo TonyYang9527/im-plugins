@@ -3,9 +3,7 @@ import {
     createQuickButton, createNewMessage,
     createLinkSnippet, createComponentMessage
 } from '../utils/messages';
-
 import { MESSAGE_SENDER } from '../utils/Msconstants';
-import {List} from 'immutable';
 
 
 let state = observable({
@@ -14,7 +12,6 @@ let state = observable({
     msgLoader: false,
     buttons: [],
     messages:[],
-    //messages:  List([createNewMessage('3344', MESSAGE_SENDER.CLIENT)]),
 });
 
 const actions = {
@@ -51,15 +48,13 @@ const actions = {
     }),
 
     dropMessages: action(() => {
-       // state.messages =List();
           state.messages =[];
     }),
 
     isWidgetOpened: computed(() => {
         return state.showChat;
     }),
-
-
+    
     setQuickButtons: action((buttons) => {
         state.buttons = buttons.map(button => createQuickButton(button))
     })
