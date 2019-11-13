@@ -1,9 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { observer } from "mobx-react";
-import close from '../../../../assets/icon/tools/clear-button.svg';
+// import close from '../../../../assets/icon/tools/clear-button.svg';
 import './style.scss';
 
+const close = require('../../../../assets/icon/tools/clear-button.svg');
 
 const Header = ({ title, subtitle, toggleChat, showCloseButton, titleAvatar }) =>
     <div className="rcw-header">

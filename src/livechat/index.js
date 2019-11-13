@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import Widget from './widget';
+import Login from '../livechat/Login';
 import LiveChatStore  from '../livechat/store/LiveChatStore';
-import logo from '../logo.svg';
+import LoginStore  from '../livechat/store/LoginStore';
+import logo from '../assets/icon/tools/logo.svg';
 import { observer } from "mobx-react";
 
 
@@ -32,11 +34,13 @@ class LiveChatApp extends Component {
   render() {
     return (
       <Widget
+        isAuth={LoginStore.state.isAuthenticated}
         store={LiveChatStore}
         title="My awwsome Chat"
         subtitle="Welcome!"
         senderPlaceHolder="typing ..."
         profileAvatar={logo}
+        showCloseButton={true}
         handleNewUserMessage={this.handleNewUserMessage}
         handleQuickButtonClicked={this.handleQuickButtonClicked}
         badge={1}

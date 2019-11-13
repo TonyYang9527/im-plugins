@@ -13,6 +13,7 @@ const WidgetLayout = props => (
 
         { props.showChat &&
             <Conversation
+                isAuth={props.isAuth}
                 store={props.store} 
                 title={props.title}
                 subtitle={props.subtitle}

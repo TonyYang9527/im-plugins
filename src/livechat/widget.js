@@ -7,6 +7,7 @@ import { observer } from "mobx-react";
 
 const Widget = props =>
     <LiveChat
+        isAuth={props.isAuth}
         store={props.store}
         title={props.title}
         titleAvatar={props.titleAvatar}

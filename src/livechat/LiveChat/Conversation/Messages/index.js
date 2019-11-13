@@ -36,7 +36,6 @@ class Messages extends Component {
   render() {
     const { profileAvatar, store} = this.props;
     const { msgLoader,messages } = store.state;
-   // const { toggleMsgLoader } = store.actions;
     console.log("Messages <<<<<<<<<<<<<<messages >>>>>>>>>>>>>", messages)
     return (
       <div id="messages" className="rcw-messages-container" ref={msg => this.$message = msg}>

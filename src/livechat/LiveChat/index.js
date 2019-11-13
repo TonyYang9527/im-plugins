@@ -36,9 +36,10 @@ class LiveChat extends Component {
     }
 
     render() {
-
+        
         return (
             <WidgetLayout
+                isAuth={this.props.isAuth}
                 store={this.props.store} 
                 showChat ={ this.props.store.state.showChat}
                 onToggleConversation={this.toggleConversation}

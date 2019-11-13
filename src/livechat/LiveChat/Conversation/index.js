@@ -1,33 +1,50 @@
-import React from 'react';
+import React, { Component } from "react";
 import PropTypes from 'prop-types';
 import Header from './Header';
 import Messages from './Messages';
 import Sender from './Sender';
 import QuickButtons from './QuickButtons';
+import Login from '../../Login';
 import './style.scss';
 import { observer } from "mobx-react";
+import LoginStore from '../../store/LoginStore';
 
+class Conversation extends Component {
 
-const Conversation = observer(props =>
-    <div className="rcw-conversation-container">
-        <Header
-            store={props.store} 
-            title={props.title}
-            subtitle={props.subtitle}
-            toggleChat={props.toggleChat}
-            showCloseButton={props.showCloseButton}
-            titleAvatar={props.titleAvatar}
-        />
-    <Messages  messages={props.store.state.messages}  store={props.store}  profileAvatar={props.profileAvatar} />
-        <QuickButtons store={props.store}  onQuickButtonClicked={props.onQuickButtonClicked} />
-        <Sender
-            store={props.store} 
-            sendMessage={props.sendMessage}
-            placeholder={props.senderPlaceHolder}
-            disabledInput={props.disabledInput}
-            autofocus={props.autofocus}
-        />
-    </div>);
+    constructor(props) {
+        super(props);
+    }
+
+    render() {
+        return (
+            <div className="rcw-conversation-container">
+                <Header
+                    store={this.props.store}
+                    title={this.props.title}
+                    subtitle={this.props.subtitle}
+                    toggleChat={this.props.toggleChat}
+                    showCloseButton={this.props.showCloseButton}
+                    titleAvatar={this.props.titleAvatar}
+                />
+                {!this.props.isAuth ?
+                    (<Login store={LoginStore} />) :
+                    (
+                        <div>
+                            <Messages store={this.props.store} profileAvatar={this.props.profileAvatar} />
+                            <QuickButtons store={this.props.store} onQuickButtonClicked={this.props.onQuickButtonClicked} />
+                            <Sender store={this.props.store} sendMessage={this.props.sendMessage}
+                                placeholder={this.props.senderPlaceHolder}
+                                disabledInput={this.props.disabledInput}
+                                autofocus={this.props.autofocus} />
+                        </div>
+                    )
+
+                }
+
+            </div>
+        );
+    }
+}
 
 Conversation.propTypes = {
     title: PropTypes.string,
@@ -42,4 +59,4 @@ Conversation.propTypes = {
     autofocus: PropTypes.bool
 };
 
-export default Conversation;
+export default observer(Conversation);
