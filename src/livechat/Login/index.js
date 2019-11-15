@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import spinner from "../../assets/icon/tools/logo.svg";
 import { observer } from "mobx-react";
-
+import './style.scss';
 
 class Login extends Component {
 

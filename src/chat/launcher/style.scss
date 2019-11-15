@@ -1,0 +1,63 @@
+@import '../style/variables.scss';
+@import '../style/common.scss';
+@import '../style/animation.scss';
+
+.lc-launcher {
+    position: absolute;
+    bottom: 0px;
+    z-index: 2;
+    will-change: opacity;
+    backface-visibility: hidden;
+    right: 0px;
+    padding: 0.5em 0.5em 1em 1em;
+}
+
+
+.lc-container {
+    display: flex;
+    flex-direction: column;
+    min-width: 0px;
+}
+
+
+.lc-icon-container {
+    display: flex;
+    min-width: 0px;
+    flex-direction: row-reverse;
+    align-items: flex-end;
+}
+
+
+
+.lc-icon {
+    display: flex;
+    width: 60px;
+    height: 60px;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 4px 8px;
+    -webkit-box-pack: center;
+    justify-content: center;
+    position: relative;
+    color: rgb(0, 0, 0);
+    border-radius: 50%;
+    background: rgb(255, 255, 255);
+}
+
+.rcw-launcher-button {
+    @include animation(0, 0.5s, slide-in);
+    align-self: flex-end;
+    background-color: $turqois-1;
+    border: 0;
+    border-radius: 50%;
+    box-shadow: 0px 2px 10px 1px $grey-3;
+    height: 60px;
+    margin-top: 10px;
+    width: 60px;
+
+    &:focus {
+        outline: none;
+    }
+}
+
+.rcw-open-launcher {
+    @include animation(0, 0.5s, rotation-rl);
+}
