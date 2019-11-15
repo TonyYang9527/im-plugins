@@ -1,0 +1,71 @@
+.lc-senders-container {
+    font-size: 14px;
+    box-shadow: rgba(0, 0, 0, 0.03) 0px -1em 1em;
+    z-index: 1;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 1em;
+    background: rgb(253, 237, 211);
+}
+
+
+
+.lc-senders{
+    display: flex;
+    min-width: 0px;
+}
+
+
+.lc-senders-textarea{
+    resize: none;
+    height: 1.5em;
+    line-height: 1.5em;
+    min-width: 0px;
+    width: 100%;
+    font-size: 1em;
+    -webkit-box-flex: 1;
+    flex-grow: 1;
+    max-width: 100%;
+    font-family: inherit;
+    border-width: 0px;
+    border-style: initial;
+    border-color: initial;
+    border-image: initial;
+    background: rgb(253, 237, 211);
+}
+
+
+
+.lc-senders-button{
+    -webkit-appearance: none;
+    display: inline-block;
+    color: inherit;
+    opacity: 0.4;
+    -webkit-box-flex: 0;
+    flex-grow: 0;
+    background: transparent;
+    border-width: 0px;
+    border-style: initial;
+    border-color: initial;
+    border-image: initial;
+    margin: 0px;
+    padding: 0px;
+    
+    &:focus {
+        outline: none;
+    }
+}
+
+
+.lc-senders-icon{
+    display: inline-block;
+    flex-shrink: 0;
+    width: 1em;
+    height: 1em;
+    font-size: 2rem;
+    user-select: none;
+    // fill: rgb(170, 170, 170);
+    overflow: hidden;
+    color: inherit;
+    border: 0;
+    background: rgb(253, 237, 211);
+}
