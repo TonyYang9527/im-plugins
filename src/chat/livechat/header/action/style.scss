@@ -1,0 +1,35 @@
+.lc-action {
+    display: flex;
+    -webkit-box-align: stretch;
+    align-items: stretch;
+    flex-shrink: 0;
+}
+
+
+.lc-action-button {
+    -webkit-appearance: none;
+    display: inline-block;
+    color: inherit;
+    background: transparent;
+    border-width: 0px;
+    border-style: initial;
+    border-color: initial;
+    border-image: initial;
+    // margin: 0px;
+    // padding: 0px;
+    border-radius: 6px;
+    &:focus {
+        outline: none;
+    }
+}
+
+.lc-action-icon {
+    display: inline-block;
+    flex-shrink: 0;
+    width: 1em;
+    height: 1em;
+    font-size: 2rem;
+    user-select: none;
+    fill: currentcolor;
+
+}

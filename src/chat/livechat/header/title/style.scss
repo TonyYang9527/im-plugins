@@ -1,0 +1,35 @@
+.lc-header{
+
+    .lc-header-title {
+        width: 100%;
+        text-align: center;
+        -webkit-box-flex: 1;
+        flex-grow: 1;
+        font-size: 0.875rem;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        margin: 0px 0px 4px;
+        padding: 0px 2px;
+        overflow: hidden;
+    
+        height: 19px;
+        line-height: 19px;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        font-size: 24px;
+    }
+    
+}
+
+
+
+.lc-title-text {
+    height: 19px;
+    line-height: 19px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    margin-bottom: 40px;
+    overflow: hidden;
+    opacity: 1;
+}

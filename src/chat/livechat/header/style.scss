@@ -1,0 +1,27 @@
+.lc-header{
+    -webkit-box-pack: center;
+    justify-content: center;
+    width: 100%;
+    position: relative;
+    z-index: 2;
+    background-color:#334588;
+    color: white;
+    font-size: 1em;
+    height: 50px;
+    flex-shrink: 0;
+    -webkit-box-flex: 0;
+    flex-grow: 0;
+    text-align: left;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    font-weight: 700 !important;
+    border-width: initial;
+    border-style: initial;
+    border-color: rgb(0, 0, 0);
+    border-image: initial;
+    overflow: hidden;
+    transition: background-color 0.3s ease 0s;
+    display: flex;
+    flex-direction: row
+}
