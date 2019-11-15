@@ -5,12 +5,8 @@ import { observer } from "mobx-react";
 
 class Login extends Component {
 
-    constructor(props) {
-        super(props);
-    }
-
     onSubmit = e => {
-        if (this.props.store.state.username !== "" &&  this.props.store.state.email !== "") {
+        if (this.props.store.state.username !== "" && this.props.store.state.email !== "") {
             e.preventDefault();
             this.props.store.actions.login();
         }
@@ -43,11 +39,11 @@ class Login extends Component {
 
                     <span className="error">{this.props.store.state.errorMessage}</span>
                     {
-          this.props.store.state.isSubmitting ?
-               ( <img src={spinner} alt="Spinner component" className="App-logo" />)
-               : (<input type="submit" disabled={this.props.store.actions.checkInputIsEmpty()} value="LOGIN" />)
-               }
-                   
+                        this.props.store.state.isSubmitting ?
+                            (<img src={spinner} alt="Spinner component" className="App-logo" />)
+                            : (<input type="submit" disabled={this.props.store.actions.checkInputIsEmpty()} value="LOGIN" />)
+                    }
+
                 </form>
             </div>
         );

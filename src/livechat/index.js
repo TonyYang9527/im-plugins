@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import Widget from './widget';
-import Login from '../livechat/Login';
 import LiveChatStore  from '../livechat/store/LiveChatStore';
 import LoginStore  from '../livechat/store/LoginStore';
 import logo from '../assets/icon/tools/logo.svg';
