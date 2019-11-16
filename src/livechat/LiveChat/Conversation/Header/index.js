@@ -5,7 +5,6 @@ import { observer } from "mobx-react";
 import './style.scss';
 
 const close = require('../../../../assets/icon/tools/clear-button.svg');
-
 const Header = ({ title, subtitle, toggleChat, showCloseButton, titleAvatar }) =>
     <div className="rcw-header">
         {showCloseButton &&
@@ -17,7 +16,7 @@ const Header = ({ title, subtitle, toggleChat, showCloseButton, titleAvatar }) =
             {titleAvatar && <img src={titleAvatar} className="avatar" alt="profile" />}
             {title}
         </h4>
-        <span>{subtitle}</span>
+        {/* <span>{subtitle}</span> */}
     </div>;
 
 Header.propTypes = {

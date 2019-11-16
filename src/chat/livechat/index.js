@@ -6,7 +6,8 @@ import Header from './header';
 import Footer from './footer';
 import Senders from './senders';
 import Content from './content';
-
+import Status from './status';
+import Login from '../login';
 import './style.scss';
 
 
@@ -17,10 +18,9 @@ class Chat extends Component {
             <ChatContainer>
                 <div className='lc-widget'>
                     <Header />
-
+                    <Status isConnect={false} status={"Reconnecting"} />
                     <Content />
-                    <Senders />
-
+                    {/* <Senders /> */}
                     <Footer />
                 </div>
             </ChatContainer>

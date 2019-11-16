@@ -11,14 +11,14 @@ class Login extends Component {
         return (
             <div className='lc-item'>
                 <div className='lc-login-container'>
-                    <div>
-                        <div className='lc-login-bg'>
+                    {/* <div>
+                        <div className='lc-login-bg'> */}
                             <div className='lc-login-container'>
                                 <LoginIcon />
                                 <LoginForm />
                             </div>
-                        </div>
-                    </div>
+                        {/* </div>
+                    </div> */}
                 </div>
             </div>
         )
