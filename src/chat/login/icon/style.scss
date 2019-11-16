@@ -1,0 +1,35 @@
+.lc-login-icon{
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    top: -21px;
+    left: 0px;
+    right: 0px;
+    color: white;
+}
+
+.lc-login-logo{
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    width: 42px;
+    height: 42px;
+    background-color: rgb(66, 127, 225);
+    overflow: hidden;
+    margin: 0px auto;
+    border-radius: 50%;
+
+}
+
+.lc-logo-image{
+
+    display: inline-block;
+    flex-shrink: 0;
+    width: 1em;
+    height: 1em;
+    font-size: 2rem;
+    user-select: none;
+    fill: currentcolor;
+}

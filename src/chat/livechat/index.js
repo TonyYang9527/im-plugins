@@ -11,13 +11,16 @@ import './style.scss';
 
 
 class Chat extends Component {
+
     render() {
         return (
-            <ChatContainer >
+            <ChatContainer>
                 <div className='lc-widget'>
                     <Header />
+
                     <Content />
                     <Senders />
+
                     <Footer />
                 </div>
             </ChatContainer>

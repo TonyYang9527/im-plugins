@@ -7,11 +7,7 @@ import './style.scss';
 class Title extends Component {
     render() {
         return (<div className='lc-header-title'>
-
-{this.props.title}
-                {/* <div className='lc-title-text'>
-                    {this.props.title}
-                </div> */}
+            {this.props.title}
         </div>)
     }
 }

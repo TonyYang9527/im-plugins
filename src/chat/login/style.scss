@@ -1,0 +1,41 @@
+
+
+.lc-item{
+    display: flex;
+    margin-bottom: 1em;
+}
+
+.lc-login-container{
+    -webkit-box-flex: 1;
+    flex-grow: 1;
+    max-width: 100%;
+    flex-shrink: 1;
+    overflow: hidden;
+}
+
+
+.lc-login-bg{
+    padding-top: 21px;
+}
+
+.lc-login-container{
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+    max-width: 270px;
+    position: relative;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px;
+    left: 50%;
+    right: auto;
+    transform: translateX(-50%);
+    border-radius: 6px;
+    padding: 8px;
+    margin: 2px 0px;
+    border-width: 0px;
+    border-style: initial;
+    border-color: initial;
+    border-image: initial;
+}
+
+
+
+

@@ -5,11 +5,9 @@ import LiveChat from './chat';
 
 function App() {
   return (
-    <div className="App">
-      <div>
-        <LiveChat />
-      </div>
-    </div>
+
+    <LiveChat />
+
   );
 }
 

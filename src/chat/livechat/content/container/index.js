@@ -7,13 +7,14 @@ import './style.scss';
 class Container extends Component {
     render() {
         return (<div className='lc-content-container'>
-            <div className='lc-content'>
-                {this.props.children}
-            </div>
+            {this.props.children}
         </div>)
     }
 }
 Container.propTypes = {
-    children: PropTypes.element.isRequired
+    children:  PropTypes.oneOfType([
+        PropTypes.array,
+        PropTypes.element,
+      ])
 };
 export default Container;
