@@ -10,7 +10,7 @@ class Avatar extends Component {
         return (
             <div className="avatar-container">
                 <div className="avatar">
-                    <img src={this.props.avatar}  className={`avatar-img  ${this.props.isClient ? 'client' : 'response'}`}/>
+                    <img src={this.props.avatar}  className={`avatar-img  ${this.props.isClient ? 'client' : 'response'}`} />
                 </div>
             </div>
         )
