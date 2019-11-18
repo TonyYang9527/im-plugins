@@ -9,9 +9,8 @@ class Content extends Component {
     render() {
         return (
             <Container>
-                <Flexible>
-                    <Login />
-                </Flexible>
+
+                <Login />
                 {/* <Separator />
                 <Senders /> */}
             </Container>

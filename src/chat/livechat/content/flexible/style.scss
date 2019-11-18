@@ -10,3 +10,17 @@
     background: transparent;
     overscroll-behavior: contain;
 }
+
+
+.lc-flexible-login{
+    width: 100%;
+    height: 100%;
+    display: -webkit-flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+
