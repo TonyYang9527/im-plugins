@@ -9,12 +9,24 @@ class Login extends Component {
     render() {
         return (
             <div className='lc-flexible-login'>
-                    <div className='lc-login-container'>
-                            <LoginIcon />
-                            <LoginForm />
+                <div className='lc-login-container'>
+                    <LoginIcon />
+                    <LoginForm />
                 </div>
             </div>
         )
     }
 }
+
+
+Login.propTypes = {
+    name: PropTypes.string,
+    email: PropTypes.string,
+    onNameChanged :PropTypes.func,
+    onEmailChanged: PropTypes.func,
+    onSubmit: PropTypes.func,
+    errorMessage: PropTypes.string,
+
+};
+
 export default Login;

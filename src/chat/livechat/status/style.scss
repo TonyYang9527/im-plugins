@@ -3,8 +3,24 @@
     font-size: 0.9em;
     line-height: 2.8em;
     justify-content: center;
-    background-color: rgb(245, 166, 35);
+    // background-color: rgb(245, 166, 35);
     align-items: center;
     font-weight: 700 !important;
     display: flex;
+
+    &.connecting {
+        background-color: #b5b5b5;
+    }
+
+    &.disconnect {
+        background-color: rgb(245, 166, 35);
+    }
+
+    &.connected {
+        background-color: #14C39A;
+    }
+    &.reconnecting {
+        background-color: #663A8B;
+    }
+
 }

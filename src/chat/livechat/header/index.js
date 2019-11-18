@@ -10,11 +10,20 @@ class Header extends Component {
     render() {
         return (
             <div className='lc-header'>
-                <Title title="Chat with us!" />
-                <Action toggleChat={(e) => { }} />
-               
+                <Title title={this.props.title} />
+                <Action toggleChat={this.props.toggleChat} />
             </div>
         )
     }
 }
-export default Header;
+
+Header.propTypes = {
+    title: PropTypes.string,
+    toggleChat: PropTypes.func.isRequired,
+};
+
+Header.defaultProps = {
+    title: ' Chat with us! ',
+    toggleChat: () => { }
+};
+export default observer(Header);
