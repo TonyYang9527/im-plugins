@@ -21,8 +21,10 @@ class Chat extends Component {
                     <Content >
                         {/* <Login /> */}
                         <Conversation>
-                            <Message text="I can answer 100+ most common questions. You can give me a shot or talk with one of our support heroes. We are online 24/7" />
-                            
+                            <Message text="I can answer 100+ most common questions. You can give me a shot or talk with one of our support heroes. We are online 24/7" isClient={true} />
+
+                            <Message text="I can answer 100+ most common questions. You can give me a shot or talk with one of our support heroes. We are online 24/7" isClient={false} />
+
                         </Conversation>
                     </Content>
 

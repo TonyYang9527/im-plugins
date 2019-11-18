@@ -6,11 +6,18 @@ import './style.scss';
 
 class Singature extends Component {
     render() {
+        if (!this.props.show) {
+            return null;
+        }
         return (
             <div>
-                <div className="singature-client">
-                    <span className="singature-client-name">{this.props.name}</span>
-                    <span className="singature-client-date">{this.props.date}</span>
+                <div className={`singature ${this.props.isClient ? 'client' : 'response'}`} >
+                    <span className="singature-name">
+                        {this.props.name}
+                    </span>
+                    <span className={`singature-date ${this.props.isClient ? 'client' : 'response'}`}>
+                        {this.props.date}
+                    </span>
                 </div>
             </div>
         )
@@ -18,8 +25,14 @@ class Singature extends Component {
 }
 
 Singature.propTypes = {
-    sender: PropTypes.string,
+    isClient: PropTypes.bool,
+    show: PropTypes.bool,
     name: PropTypes.string,
     date: PropTypes.string
+};
+
+Singature.defaultProps = {
+    isClient: true,
+    show: true,
 };
 export default Singature;

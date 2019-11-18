@@ -1,12 +1,17 @@
-.lc-message-client {
+.lc-message {
     display: flex;
     margin-bottom: 1em;
-    flex-direction: row-reverse;
 
+    &.client {
+        flex-direction: row-reverse;
+    }
 
+    &.response {
+        flex-direction: row;
+    }
 }
 
-.lc-message-client-bubble {
+.lc-message-bubble {
     -webkit-box-flex: 1;
     flex-grow: 1;
     max-width: 100%;
@@ -14,27 +19,40 @@
     overflow: hidden;
 }
 
-
-.lc-message-client-box {
+.lc-message-box {
     display: flex;
     align-items: flex-start;
     font-size: 0.9em;
     max-width: 100%;
-    flex-direction: row-reverse;
     opacity: 1;
     color: rgb(66, 77, 87);
     -webkit-box-pack: start;
     justify-content: flex-start;
     margin: 0.3em;
     animation: 0s ease 0s 1 normal none running none;
+
+    &.client {
+        flex-direction: row-reverse;
+    }
+
+    &.response {
+        flex-direction: row;
+    }
 }
 
 
-.lc-message-client-column {
+.lc-message-column {
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
     overflow: hidden;
+
+    &.client {
+        align-items: flex-end;
+    }
+
+    &.response {
+        align-items: flex-start;
+    }
 }
 
 
@@ -46,11 +64,20 @@
     border-top-right-radius: 6px;
     border-bottom-right-radius: 6px;
     border-bottom-left-radius: 6px;
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px;
     border-width: 0px;
     border-style: initial;
     border-color: initial;
     border-image: initial;
+
+    &.client {
+        color: rgb(255, 255, 255);
+        background: rgb(67, 132, 245);
+    }
+
+    &.response {
+        color: rgb(66, 77, 87);
+        background: rgb(255, 255, 255);
+    }
 
     &:first-child:last-child {
         border-top-left-radius: inherit;
@@ -61,16 +88,6 @@
 
 }
 
-.client {
-    color: rgb(255, 255, 255);
-    background: rgb(67, 132, 245);
-}
-
-.response {
-    color: rgb(66, 77, 87);
-    background: rgb(255, 255, 255);
-}
-
 
 .lc-message-text {
     white-space: pre-line;
@@ -78,11 +95,4 @@
     max-width: 100%;
     font-size: 14px;
     padding: 1em;
-}
-
-
-
-.lc-message-response {
-    display: flex;
-    margin-bottom: 1em;
 }

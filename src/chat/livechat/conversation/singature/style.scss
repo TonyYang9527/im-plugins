@@ -1,19 +1,27 @@
-.singature-client {
-    text-align: right;
+.singature {
+
+    &.client {
+        text-align: right;
+    }
+
+    &.response {
+        text-align: right;
+    }
 }
 
 
-.singature-client-name {
+.singature-name {
     font-size: 0.8em;
 }
 
-.singature-client-date {
+.singature-date {
     font-size: 0.8em;
-    text-align: right;
-}
 
+    &.client {
+        text-align: right;
+    }
 
-
-.singature-response {
-    text-align: left;
+    &.response {
+        text-align: right;
+    }
 }
