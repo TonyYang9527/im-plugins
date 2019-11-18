@@ -22,20 +22,15 @@ class Chat extends Component {
                     <Header title={this.props.title} toggleChat={this.props.toggleChat} />
                     <Status showConnect={this.props.showConnect} connect={ConnectEnum.CONNECTING} />
                     <Content >
-                        <Login />
-                        {/* <Conversation>
+                        {/* <Login /> */}
+                        <Conversation>
                             <Message text="I can answer 100+ most common questions. You can give me a shot or talk with one of our support heroes. We are online 24/7" isClient={true} />
-
                             <Message text="I can answer 100+ most common questions. You can give me a shot or talk with one of our support heroes. We are online 24/7" isClient={false} />
-
                             <Message text="I can answer 100+ most common questions. You can give me a shot or talk with one of our support heroes. We are online 24/7" isClient={true} />
-
                             <Message text="I can answer 100+ most common questions. You can give me a shot or talk with one of our support heroes. We are online 24/7" isClient={false} />
-
                             <Message text="I can answer 100+ most common questions. You can give me a shot or talk with one of our support heroes. We are online 24/7" isClient={true} />
-
                             <Message text="I can answer 100+ most common questions. You can give me a shot or talk with one of our support heroes. We are online 24/7" isClient={false} />
-                        </Conversation> */}
+                        </Conversation>
                     </Content>
                     <Footer />
                 </div>
@@ -50,29 +45,9 @@ Chat.propTypes = {
     toggleChat :PropTypes.func,
     showConnect: PropTypes.bool,
     connect: PropTypes.any,
-
-
-
-    titleAvatar: PropTypes.string,
-    subtitle: PropTypes.string,
-    handleNewUserMessage: PropTypes.func.isRequired,
-    handleQuickButtonClicked: PropTypes.func,
-    senderPlaceHolder: PropTypes.string,
-    profileAvatar: PropTypes.string,
-    showCloseButton: PropTypes.bool,
-    fullScreenMode: PropTypes.bool,
-    badge: PropTypes.number,
-    autofocus: PropTypes.bool,
-    launcher: PropTypes.func
 };
 
 Chat.defaultProps = {
     title: 'Welcome',
-    subtitle: 'This is your chat subtitle',
-    senderPlaceHolder: 'Type a message...',
-    showCloseButton: true,
-    fullScreenMode: false,
-    badge: 0,
-    autofocus: true
 };
 export default Chat;
