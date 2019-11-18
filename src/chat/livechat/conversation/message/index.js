@@ -8,7 +8,7 @@ class Message extends Component {
     render() {
         return (
             <div className={`lc-message ${this.props.isClient ? 'client' : 'response'}`} >
-                <Avatar />
+                <Avatar isClient={this.props.isClient } />
                 <div className="lc-message-bubble">
 
                     <div>

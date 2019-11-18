@@ -1,4 +1,4 @@
-.avatar-container{
+.avatar-container {
     display: flex;
     flex-direction: column;
     -webkit-box-align: center;
@@ -12,7 +12,7 @@
     margin: 0px 0.3em 0px 0px;
 }
 
-.avatar{
+.avatar {
     text-align: center;
     background-color: rgb(255, 255, 255);
     text-transform: uppercase;
@@ -27,12 +27,18 @@
     border-image: initial;
 }
 
-.avatar-img{
+.avatar-img {
     display: block;
     width: 100%;
     height: 100%;
     object-fit: cover;
     border-radius: inherit;
-    background-color:#424d57;
-}
+    &.client {
+        background-color: #334588;
+    }
 
+    &.response {
+        background-color: #b5b5b5;
+    }
+
+}

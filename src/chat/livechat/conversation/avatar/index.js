@@ -10,7 +10,7 @@ class Avatar extends Component {
         return (
             <div className="avatar-container">
                 <div className="avatar">
-                    <img src={this.props.avatar}  className="avatar-img" />
+                    <img src={this.props.avatar}  className={`avatar-img  ${this.props.isClient ? 'client' : 'response'}`}/>
                 </div>
             </div>
         )
@@ -19,9 +19,11 @@ class Avatar extends Component {
 
 Avatar.propTypes = {
     avatar: PropTypes.string,
+    isClient: PropTypes.bool,
 };
 Avatar.defaultProps = {
     avatar: user,
+    isClient :true,
   };
 
 export default Avatar;
