@@ -9,11 +9,9 @@ class Login extends Component {
     render() {
         return (
             <div className='lc-flexible-login'>
-                <div className='lc-item'>
                     <div className='lc-login-container'>
                             <LoginIcon />
                             <LoginForm />
-                    </div>
                 </div>
             </div>
         )

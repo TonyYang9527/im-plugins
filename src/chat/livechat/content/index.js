@@ -1,20 +1,19 @@
 import React, { Component } from 'react';
-import Container from './container';
-import Separator from './separator';
-import Login from '../../login';
-import Flexible from './flexible';
-import Senders from '../senders';
+import PropTypes from 'prop-types';
+import './style.scss';
 
 class Content extends Component {
     render() {
         return (
-            <Container>
-
-                <Login />
-                {/* <Separator />
-                <Senders /> */}
-            </Container>
-        )
+            <div className='lc-content-container'>
+                {this.props.children}
+            </div>)
     }
 }
+Content.propTypes = {
+    children: PropTypes.oneOfType([
+        PropTypes.array,
+        PropTypes.element,
+    ])
+};
 export default Content;
