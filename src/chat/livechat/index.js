@@ -7,9 +7,10 @@ import Footer from './footer';
 import Content from './content';
 import Status from './status';
 import Login from '../login';
+import Senders from './senders';
 import './style.scss';
-
-
+import Conversation from './conversation';
+import Message from './conversation/message';
 class Chat extends Component {
     render() {
         return (
@@ -18,8 +19,13 @@ class Chat extends Component {
                     <Header />
                     <Status isConnect={false} status={"Reconnecting"} />
                     <Content >
-                        <Login />
+                        {/* <Login /> */}
+                        <Conversation>
+                            <Message text="I can answer 100+ most common questions. You can give me a shot or talk with one of our support heroes. We are online 24/7" />
+                            
+                        </Conversation>
                     </Content>
+
                     <Footer />
                 </div>
             </ChatContainer>
