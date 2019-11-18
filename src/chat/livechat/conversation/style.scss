@@ -1,4 +1,4 @@
-.lc-conversation-container{
+.lc-conversation-container {
     overflow-y: auto;
     height: 100%;
     position: absolute;
@@ -6,8 +6,11 @@
     bottom: 0px;
     left: 0px;
     right: 0px;
-    padding: 0.5em;
+    // padding: 0.5em;
     background: transparent;
     overscroll-behavior: contain;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    padding-top: 0.5em;
 
 }

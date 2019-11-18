@@ -12,6 +12,9 @@ import './style.scss';
 import Conversation from './conversation';
 import Message from './conversation/message';
 class Chat extends Component {
+
+
+    
     render() {
         return (
             <ChatContainer>
@@ -19,8 +22,8 @@ class Chat extends Component {
                     <Header />
                     <Status isConnect={true} status={"Reconnecting"} />
                     <Content >
-                        <Login />
-                        {/* <Conversation>
+                        {/* <Login /> */}
+                        <Conversation>
                             <Message text="I can answer 100+ most common questions. You can give me a shot or talk with one of our support heroes. We are online 24/7" isClient={true} />
 
                             <Message text="I can answer 100+ most common questions. You can give me a shot or talk with one of our support heroes. We are online 24/7" isClient={false} />
@@ -32,8 +35,7 @@ class Chat extends Component {
                             <Message text="I can answer 100+ most common questions. You can give me a shot or talk with one of our support heroes. We are online 24/7" isClient={true} />
 
                             <Message text="I can answer 100+ most common questions. You can give me a shot or talk with one of our support heroes. We are online 24/7" isClient={false} />
-
-                        </Conversation> */}
+                        </Conversation>
                     </Content>
 
                     <Footer />
