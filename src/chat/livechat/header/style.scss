@@ -12,7 +12,6 @@
     -webkit-box-flex: 0;
     flex-grow: 0;
     text-align: left;
-    display: flex;
     -webkit-box-align: center;
     align-items: center;
     font-weight: 700 !important;
@@ -23,5 +22,6 @@
     overflow: hidden;
     transition: background-color 0.3s ease 0s;
     display: flex;
-    flex-direction: row
+    flex-direction: row;
+    padding: 12px 0 12px;
 }

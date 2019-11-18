@@ -17,10 +17,18 @@ class Chat extends Component {
             <ChatContainer>
                 <div className='lc-widget'>
                     <Header />
-                    <Status isConnect={false} status={"Reconnecting"} />
+                    <Status isConnect={true} status={"Reconnecting"} />
                     <Content >
                         {/* <Login /> */}
                         <Conversation>
+                            <Message text="I can answer 100+ most common questions. You can give me a shot or talk with one of our support heroes. We are online 24/7" isClient={true} />
+
+                            <Message text="I can answer 100+ most common questions. You can give me a shot or talk with one of our support heroes. We are online 24/7" isClient={false} />
+
+                            <Message text="I can answer 100+ most common questions. You can give me a shot or talk with one of our support heroes. We are online 24/7" isClient={true} />
+
+                            <Message text="I can answer 100+ most common questions. You can give me a shot or talk with one of our support heroes. We are online 24/7" isClient={false} />
+
                             <Message text="I can answer 100+ most common questions. You can give me a shot or talk with one of our support heroes. We are online 24/7" isClient={true} />
 
                             <Message text="I can answer 100+ most common questions. You can give me a shot or talk with one of our support heroes. We are online 24/7" isClient={false} />
