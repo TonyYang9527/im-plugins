@@ -3,6 +3,7 @@ import { observer } from "mobx-react";
 import PropTypes from 'prop-types';
 import LoginIcon from './icon';
 import LoginForm from './form';
+import LoginError from './error';
 import './style.scss';
 
 class Login extends Component {
@@ -11,6 +12,7 @@ class Login extends Component {
             <div className='lc-flexible-login'>
                 <div className='lc-login-container'>
                     <LoginIcon />
+                    <LoginError showError={true} errorMessage={"Please fill out all required fields."}  />
                     <LoginForm />
                 </div>
             </div>

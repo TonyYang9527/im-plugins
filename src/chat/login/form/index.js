@@ -17,7 +17,6 @@ class LoginForm extends Component {
                                     <span className='linkify'>Name: </span>
                                 </label>
                                 <input name="name" value="123" className="lc-form-item-input" onChange={(e)=>{}} />
-                                <p className="lc-form-item-input-er">Please fill out all required fields.</p>
                             </div>
                         </div>
 
@@ -27,7 +26,6 @@ class LoginForm extends Component {
                                     <span className='linkify'>Name: </span>
                                 </label>
                                 <input name="email" value="123" className="lc-form-item-input" onChange={(e)=>{}} />
-                                <p className="lc-form-item-input-er">Please fill out all required fields.</p>
                             </div>
                         </div>
 
