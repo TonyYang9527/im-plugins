@@ -6,7 +6,7 @@ import './style.scss';
 
 class Singature extends Component {
     render() {
-        if (!this.props.show) {
+        if (!this.props.expand) {
             return null;
         }
         return (
@@ -26,13 +26,13 @@ class Singature extends Component {
 
 Singature.propTypes = {
     isClient: PropTypes.bool,
-    show: PropTypes.bool,
+    expand: PropTypes.bool,
     name: PropTypes.string,
     date: PropTypes.string
 };
 
 Singature.defaultProps = {
     isClient: true,
-    show: true,
+    expand: true,
 };
 export default Singature;
