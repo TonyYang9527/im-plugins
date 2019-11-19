@@ -19,10 +19,23 @@ class Chat extends Component {
         return (
             <ChatContainer>
                 <div className='lc-widget'>
-                    <Header title={this.props.title} toggleChat={this.props.toggleChat} />
-                    <Status showConnect={this.props.showConnect} connect={ConnectEnum.CONNECTING} />
+                    <Header
+                        title={this.props.title}
+                        toggleChat={this.props.toggleChat} />
+                    <Status
+                        showConnect={this.props.showConnect}
+                        connect={this.props.connect} />
                     <Content >
-                        <Login />
+                        <Login
+                            name={this.props.name}
+                            email={this.props.email}
+                            onNameChanged={this.props.onNameChanged}
+                            onEmailChanged={this.props.onEmailChanged}
+                            showError={this.props.showError}
+                            errorMessage={this.props.errorMessage}
+                            disabledSubmit={this.props.disabledSubmit}
+                            onSubmit={this.props.onSubmit}
+                        />
                         {/* <Conversation>
                             <Message text="I can answer 100+ most common questions. You can give me a shot or talk with one of our support heroes. We are online 24/7" isClient={true} />
                             <Message text="I can answer 100+ most common questions. You can give me a shot or talk with one of our support heroes. We are online 24/7" isClient={false} />
@@ -42,12 +55,22 @@ class Chat extends Component {
 
 Chat.propTypes = {
     title: PropTypes.string,
-    toggleChat :PropTypes.func,
+    toggleChat: PropTypes.func,
     showConnect: PropTypes.bool,
     connect: PropTypes.any,
+
+    name: PropTypes.string,
+    email: PropTypes.string,
+    onNameChanged: PropTypes.func,
+    onEmailChanged: PropTypes.func,
+    onSubmit: PropTypes.func,
+    disabledSubmit: PropTypes.bool,
+    showError: PropTypes.bool,
+    errorMessage: PropTypes.string,
 };
 
 Chat.defaultProps = {
     title: 'Welcome',
+    connect: ConnectEnum.CONNECTING,
 };
 export default Chat;

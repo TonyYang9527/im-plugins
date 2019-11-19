@@ -28,4 +28,4 @@ LoginError.defaultProps = {
     showError: false,
 };
 
-export default LoginError;
+export default observer(LoginError);

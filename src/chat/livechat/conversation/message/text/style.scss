@@ -1,0 +1,79 @@
+
+
+.lc-message-box {
+    display: flex;
+    align-items: flex-start;
+    font-size: 0.9em;
+    max-width: 100%;
+    opacity: 1;
+    color: rgb(66, 77, 87);
+    -webkit-box-pack: start;
+    justify-content: flex-start;
+    margin: 0.3em;
+    animation: 0s ease 0s 1 normal none running none;
+
+    &.client {
+        flex-direction: row-reverse;
+    }
+
+    &.response {
+        flex-direction: row;
+    }
+}
+
+
+.lc-message-column {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+
+    &.client {
+        align-items: flex-end;
+    }
+
+    &.response {
+        align-items: flex-start;
+    }
+}
+
+
+.lc-message-bubble {
+    display: inline-block;
+    max-width: 100%;
+    margin-bottom: 0.1em;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+    border-bottom-left-radius: 6px;
+    border-width: 0px;
+    border-style: initial;
+    border-color: initial;
+    border-image: initial;
+
+    &.client {
+        color: rgb(255, 255, 255);
+        background: rgb(67, 132, 245);
+    }
+
+    &.response {
+        color: rgb(66, 77, 87);
+        background: rgb(255, 255, 255);
+    }
+
+    &:first-child:last-child {
+        border-top-left-radius: inherit;
+        border-top-right-radius: inherit;
+        border-bottom-right-radius: inherit;
+        border-bottom-left-radius: inherit;
+    }
+
+}
+
+
+.lc-message-text {
+    white-space: pre-line;
+    overflow-wrap: break-word;
+    max-width: 100%;
+    font-size: 14px;
+    padding: 1em;
+}

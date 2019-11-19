@@ -7,13 +7,23 @@ import LoginError from './error';
 import './style.scss';
 
 class Login extends Component {
+
     render() {
         return (
             <div className='lc-flexible-login'>
                 <div className='lc-login-container'>
                     <LoginIcon />
-                    <LoginError showError={true} errorMessage={"Please fill out all required fields."}  />
-                    <LoginForm />
+                    <LoginError
+                        showError={this.props.showError}
+                        errorMessage={this.props.errorMessage} />
+                    <LoginForm
+                        name={this.props.name}
+                        email={this.props.email}
+                        disabledSubmit={this.props.disabledSubmit}
+                        onNameChanged={this.props.onNameChanged}
+                        onEmailChanged={this.props.onEmailChanged}
+                        onSubmit={this.props.onSubmit}
+                    />
                 </div>
             </div>
         )
@@ -24,11 +34,18 @@ class Login extends Component {
 Login.propTypes = {
     name: PropTypes.string,
     email: PropTypes.string,
-    onNameChanged :PropTypes.func,
+    onNameChanged: PropTypes.func,
     onEmailChanged: PropTypes.func,
     onSubmit: PropTypes.func,
+    disabledSubmit: PropTypes.bool,
+    showError: PropTypes.bool,
     errorMessage: PropTypes.string,
-
 };
 
-export default Login;
+Login.defaultProps = {
+    disabledSubmit: true,
+    showError: false,
+};
+
+
+export default observer(Login);

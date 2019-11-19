@@ -4,26 +4,46 @@ import PropTypes from 'prop-types';
 import './style.scss';
 import Singature from '../singature';
 import Avatar from '../avatar';
+import TextMessage from './text';
 class Message extends Component {
+
+
+    getComponentToRender = message => {
+        
+         const ComponentToRender = message.get('component');
+         return <ComponentToRender message={message} />;
+      };
+
+
     render() {
         return (
             <div className={`lc-message ${this.props.isClient ? 'client' : 'response'}`} >
-                <Avatar isClient={this.props.isClient } />
+                <Avatar isClient={this.props.isClient} />
                 <div className="lc-message-bubble">
 
-                    <div>
+                    <TextMessage 
+                        isClient={this.props.isClient}
+                        name={this.props.name}
+                        date={this.props.date}
+                        text={this.props.text}
+                        showSingature={this.props.showSingature} />
+
+                    {/* <div>
                         <div className={`lc-message-box ${this.props.isClient ? 'client' : 'response'}`}>
-                            <div className={`lc-message-column ${this.props.isClient ? 'client' : 'response'}`}>
-                                <Singature name="yangxiangjiang" date="13:54" isClient={this.props.isClient} show={true} />
+                        <div className={`lc-message-column ${this.props.isClient ? 'client' : 'response'}`}>
+
+
+                         <Singature name="yangxiangjiang" date="13:54" isClient={this.props.isClient} show={true} />
+
                                 <div className={`lc-message-bubble ${this.props.isClient ? 'client' : 'response'}`}>
                                     <div className="lc-message-text">
                                         <span>{this.props.text}</span>
                                     </div>
                                 </div>
 
-                            </div>
                         </div>
-                    </div>
+                        </div>
+                    </div> */}
 
 
                 </div>
