@@ -8,24 +8,19 @@ import Content from './content';
 import Status from './status';
 import Login from '../login';
 import Senders from './senders';
-import './style.scss';
 import Conversation from './conversation';
-import Message from './conversation/message';
 import { ConnectEnum } from '../utils/connect';
+import './style.scss';
+
 
 class Chat extends Component {
-
 
     render() {
         return (
             <ChatContainer>
                 <div className='lc-widget'>
-                    <Header
-                        title={this.props.title}
-                        toggleChat={this.props.toggleChat} />
-                    <Status
-                        showConnect={this.props.showConnect}
-                        connect={this.props.connect} />
+                    <Header title={this.props.title} toggleChat={this.props.toggleChat} />
+                    <Status showConnect={this.props.showConnect} connect={this.props.connect} />
                     <Content >
                         {/* <Login
                             name={this.props.name}
@@ -65,6 +60,6 @@ Chat.propTypes = {
 
 Chat.defaultProps = {
     title: 'Welcome',
-    connect: ConnectEnum.CONNECTING,
+    connect: ConnectEnum.SUCCEED,
 };
 export default Chat;

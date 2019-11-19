@@ -21,24 +21,62 @@ Conversation.propTypes = {
 Conversation.defaultProps = {
     messages: [
         createTextMessage(
-        { text: 'I can answer 100+ most common questions. You can give me a shot or talk with one of our support heroes. We are online 24/7',
-        sender :MessageSender.CLIENT,
-         name: 'yangxiangjiang', date: '17:55', isClient: true }
-         ),
+            {
+                text: 'I can answer 100+ most common questions. You can give me a shot or talk with one of our support heroes. We are online 24/7',
+                sender: MessageSender.CLIENT,
+                name: 'Tony', date: '17:55'
+            }
+        ),
 
-         createTextMessage(
-            { text: 'I can answer 100+ most common questions. You can give me a shot or talk with one of our support heroes. We are online 24/7',
-            sender :MessageSender.RESPONSE,
-             name: 'yangxiangjiang', date: '17:55', isClient: false }
-             ),
+        createTextMessage(
+            {
+                text: 'I can answer 100+ most common questions. You can give me a shot or talk with one of our support heroes. We are online 24/7',
+                sender: MessageSender.RESPONSE,
+                name: 'Jack', date: '17:55'
+            }
+        ),
 
-             createTextMessage(
-                { text: 'I can answer 100+ most common questions. You can give me a shot or talk with one of our support heroes. We are online 24/7',
-                sender :MessageSender.CLIENT,
-                 name: 'yangxiangjiang', date: '17:55', isClient: true }
-                 ),   
-        
-        ],
+        createTextMessage(
+            {
+                text: 'I can answer 100+ most common questions. You can give me a shot or talk with one of our support heroes. We are online 24/7',
+                sender: MessageSender.RESPONSE,
+                name: 'jame', date: '17:55'
+            }
+        ),
+
+        createTextMessage(
+            {
+                text: 'I can answer 100+ most common questions. You can give me a shot or talk with one of our support heroes. We are online 24/7',
+                sender: MessageSender.RESPONSE,
+                name: 'Lily', date: '17:55'
+            }
+        ),
+
+        createTextMessage(
+            {
+                text: 'I can answer 100+ most common questions. You can give me a shot or talk with one of our support heroes. We are online 24/7',
+                sender: MessageSender.CLIENT,
+                name: 'yangxiangjiang', date: '17:55'
+            }
+        ),
+
+        createTextMessage(
+            {
+                text: 'I can answer 100+ most common questions. You can give me a shot or talk with one of our support heroes. We are online 24/7',
+                sender: MessageSender.RESPONSE,
+                name: 'yangxiangjiang', date: '17:55'
+            }
+        ),
+
+        createTextMessage(
+            {
+                text: 'I can answer 100+ most common questions. You can give me a shot or talk with one of our support heroes. We are online 24/7',
+                sender: MessageSender.RESPONSE,
+                name: 'yangxiangjiang', date: '17:55'
+            }
+        ),
+
+    ],
 };
 
 export default Conversation;

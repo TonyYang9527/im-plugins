@@ -13,9 +13,10 @@ class Messages extends Component {
 
     ComponentRender = (message, index) => {
         const Component = message.get('component');
+        const sender = message.get('sender');
         return (
-            <Bubble isClient={message.get('isClient')}>
-                <Component message={message} />
+            <Bubble sender={sender} key={`ble-${index}`}  >
+                <Component message={message}  key={`msg-${index}`}/>
             </Bubble>
         )
     };

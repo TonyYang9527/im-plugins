@@ -26,7 +26,6 @@ export const MessagePropTypes = {
         text: PropTypes.string,
         name: PropTypes.string,
         date: PropTypes.string,
-        isClient: PropTypes.bool,
         showSingature: PropTypes.bool,
         toggleSingature: PropTypes.func,
         sender: PropTypes.oneOf([
@@ -37,14 +36,13 @@ export const MessagePropTypes = {
 };
 
 
-export function createTextMessage({text,sender,name, date, isClient}) {
+export function createTextMessage({text,sender,name, date}) {
     return Map({
         type: MessageType.TEXT,
         component: TextMessage,
         text: text,
         name: name,
         date: date,
-        isClient: isClient ==null ? true:isClient,
         showSingature :true,
         sender:sender,
     });

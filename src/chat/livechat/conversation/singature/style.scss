@@ -1,5 +1,5 @@
 .singature {
-
+    padding: 0.2em;
     &.client {
         text-align: right;
     }
@@ -12,10 +12,12 @@
 
 .singature-name {
     font-size: 0.8em;
+    padding: 0.2em;
 }
 
 .singature-date {
     font-size: 0.8em;
+    color: #d46d39;
 
     &.client {
         text-align: right;

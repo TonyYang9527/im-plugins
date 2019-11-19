@@ -6,11 +6,11 @@ import './style.scss';
 
 
 class Bubble extends Component {
-    
+
     render() {
         return (
-            <div className={`lc-message ${this.props.isClient ? 'client' : 'response'}`} >
-                <Avatar isClient={this.props.isClient} />
+            <div className={`lc-message ${this.props.sender}`} >
+                <Avatar sender={this.props.sender} />
                 <div className="lc-message-bubble">
                     {this.props.children}
                 </div>
@@ -20,7 +20,7 @@ class Bubble extends Component {
 }
 
 Bubble.propTypes = {
-    isClient: PropTypes.bool,
+    sender: PropTypes.string,
     children: PropTypes.oneOfType([
         PropTypes.array,
         PropTypes.element,

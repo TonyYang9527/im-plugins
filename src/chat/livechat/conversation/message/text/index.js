@@ -10,18 +10,20 @@ class TextMessage extends Component {
     render() {
         return (
             <div>
-                <div className={`lc-message-box ${this.props.message.get('isClient') ? 'client' : 'response'}`}>
-                    <div className={`lc-message-column ${this.props.message.get('isClient') ? 'client' : 'response'}`}>
+                <div className={`lc-message-box ${this.props.message.get('sender')}`}>
+                    <div className={`lc-message-column ${this.props.message.get('sender')}`}>
                         <Singature
                             name={this.props.message.get('name')}
                             date={this.props.message.get('date')}
-                            isClient={this.props.message.get('isClient')}
+                            sender={this.props.message.get('sender')}
                             expand={this.props.message.get('expand')} />
-                        <div className={`lc-message-bubble ${this.props.message.get('isClient') ? 'client' : 'response'}`}>
+
+                         <div className={`lc-message-bubble ${this.props.message.get('sender')}`}>
                             <div className="lc-message-text">
                                 <span>{this.props.message.get('text')}</span>
                             </div>
                         </div>
+                        
                     </div>
                 </div>
             </div>
@@ -30,7 +32,7 @@ class TextMessage extends Component {
 }
 
 TextMessage.propTypes = {
-    message: MessagePropTypes.text
+    message: PropTypes.object
 };
 
 export default TextMessage;
