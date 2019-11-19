@@ -6,8 +6,7 @@ import Header from './header';
 import Footer from './footer';
 import Content from './content';
 import Status from './status';
-// import Login from '../login';
-// import Senders from './senders';
+import Login from '../login';
 import Conversation from './conversation';
 import { ConnectEnum } from '../utils/connect';
 import './style.scss';
@@ -22,7 +21,8 @@ class Chat extends Component {
                     <Header title={this.props.title} toggleChat={this.props.toggleChat} />
                     <Status showConnect={this.props.showConnect} connect={this.props.connect} />
                     <Content >
-                        {/* <Login
+                        <Login
+                            isAuth={this.props.isAuth}
                             name={this.props.name}
                             email={this.props.email}
                             onNameChanged={this.props.onNameChanged}
@@ -31,8 +31,8 @@ class Chat extends Component {
                             errorMessage={this.props.errorMessage}
                             disabledSubmit={this.props.disabledSubmit}
                             onSubmit={this.props.onSubmit}
-                        /> */}
-                        <Conversation />
+                        />
+                        <Conversation isAuth={this.props.isAuth} />
                     </Content>
                     <Footer />
                 </div>
@@ -43,6 +43,7 @@ class Chat extends Component {
 
 
 Chat.propTypes = {
+    isAuth: PropTypes.bool,
     title: PropTypes.string,
     toggleChat: PropTypes.func,
     showConnect: PropTypes.bool,
@@ -59,6 +60,7 @@ Chat.propTypes = {
 };
 
 Chat.defaultProps = {
+    isAuth: false,
     title: 'Welcome',
     connect: ConnectEnum.SUCCEED,
 };

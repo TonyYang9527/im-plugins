@@ -7,14 +7,19 @@ import { createTextMessage, MessageSender } from '../../utils/message';
 
 class Conversation extends Component {
     render() {
+        if(!this.props.isAuth){
+          return null;
+        }
         return (<Messages messages={this.props.messages} />)
     }
 }
 Conversation.propTypes = {
     messages: PropTypes.array,
+    isAuth: PropTypes.bool,
 };
 
 Conversation.defaultProps = {
+    isAuth: true,
     messages: [
         createTextMessage(
             {
@@ -75,4 +80,4 @@ Conversation.defaultProps = {
     ],
 };
 
-export default  observer(Conversation);
+export default observer(Conversation);

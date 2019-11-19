@@ -9,6 +9,9 @@ import './style.scss';
 class Login extends Component {
 
     render() {
+        if (this.props.isAuth) {
+            return null;
+        }
         return (
             <div className='lc-flexible-login'>
                 <div className='lc-login-container'>
@@ -32,6 +35,7 @@ class Login extends Component {
 
 
 Login.propTypes = {
+    isAuth: PropTypes.bool,
     name: PropTypes.string,
     email: PropTypes.string,
     onNameChanged: PropTypes.func,
@@ -43,8 +47,11 @@ Login.propTypes = {
 };
 
 Login.defaultProps = {
+    isAuth: true,
     disabledSubmit: true,
     showError: false,
+    onNameChanged:(value)=>{},
+    onEmailChanged:(value)=>{},
 };
 
 
