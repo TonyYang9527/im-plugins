@@ -60,7 +60,7 @@ Chat.propTypes = {
 };
 
 Chat.defaultProps = {
-    isAuth: false,
+    isAuth: true,
     title: 'Welcome',
     connect: ConnectEnum.SUCCEED,
 };
