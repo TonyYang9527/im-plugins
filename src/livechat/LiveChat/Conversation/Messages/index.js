@@ -39,7 +39,8 @@ class Messages extends Component {
     console.log("Messages <<<<<<<<<<<<<<messages >>>>>>>>>>>>>", messages)
     return (
       <div id="messages" className="rcw-messages-container" ref={msg => this.$message = msg}>
-        {messages.map((message, index) =>
+        {
+        messages.map((message, index) =>
           <div className="rcw-message" key={index}>
             {profileAvatar &&
               message.get('showAvatar') &&

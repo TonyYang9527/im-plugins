@@ -15,6 +15,7 @@ import { ConnectEnum } from '../utils/connect';
 
 class Chat extends Component {
 
+    
     render() {
         return (
             <ChatContainer>
@@ -26,7 +27,7 @@ class Chat extends Component {
                         showConnect={this.props.showConnect}
                         connect={this.props.connect} />
                     <Content >
-                        <Login
+                        {/* <Login
                             name={this.props.name}
                             email={this.props.email}
                             onNameChanged={this.props.onNameChanged}
@@ -35,15 +36,11 @@ class Chat extends Component {
                             errorMessage={this.props.errorMessage}
                             disabledSubmit={this.props.disabledSubmit}
                             onSubmit={this.props.onSubmit}
-                        />
-                        {/* <Conversation>
+                        /> */}
+                        <Conversation>
                             <Message text="I can answer 100+ most common questions. You can give me a shot or talk with one of our support heroes. We are online 24/7" isClient={true} />
-                            <Message text="I can answer 100+ most common questions. You can give me a shot or talk with one of our support heroes. We are online 24/7" isClient={false} />
-                            <Message text="I can answer 100+ most common questions. You can give me a shot or talk with one of our support heroes. We are online 24/7" isClient={true} />
-                            <Message text="I can answer 100+ most common questions. You can give me a shot or talk with one of our support heroes. We are online 24/7" isClient={false} />
-                            <Message text="I can answer 100+ most common questions. You can give me a shot or talk with one of our support heroes. We are online 24/7" isClient={true} />
-                            <Message text="I can answer 100+ most common questions. You can give me a shot or talk with one of our support heroes. We are online 24/7" isClient={false} />
-                        </Conversation> */}
+                     
+                        </Conversation>
                     </Content>
                     <Footer />
                 </div>

@@ -6,11 +6,18 @@ import Singature from '../singature';
 import Avatar from '../avatar';
 import TextMessage from './text';
 import { createTextMessage, MessageSender } from '../../../utils/message';
+
 class Message extends Component {
 
 
-    getComponentToRender = message => {
+    ComponentRender = (message, index) => {
         const Component = message.get('component');
+        // if (index == 0) {
+        // }
+        // if (index == this.props.messages.length - 1) {
+        // }
+        // const previousMessage = this.props.messages.get(index - 1);
+        // const nextMessage = this.props.messages.get(index + 1);
         return <Component message={message} />;
     };
 
@@ -21,25 +28,15 @@ class Message extends Component {
                 <Avatar isClient={this.props.isClient} />
                 <div className="lc-message-bubble">
                     {
-
-
+                        this.props.messages.map(
+                            (message, index) => this.ComponentRender(message, index)
+                        )
                     }
                 </div>
             </div>
         )
     }
 }
-// Message.propTypes = {
-//     text: PropTypes.string,
-//     isClient: PropTypes.bool,
-//     expand: PropTypes.bool,
-//     onTap: PropTypes.func,
-// };
-
-// Message.defaultProps = {
-//     isClient: true,
-//     expand: true
-// };
 
 Message.propTypes = {
     messages: PropTypes.array,
