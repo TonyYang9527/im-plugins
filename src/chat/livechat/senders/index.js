@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { observer } from "mobx-react";
-import PropTypes from 'prop-types';
 import './style.scss';
 import send from '../../../assets/icon/tools/send_button.svg';
 
@@ -20,4 +19,4 @@ class Senders extends Component {
         )
     }
 }
-export default Senders;
+export default observer(Senders);

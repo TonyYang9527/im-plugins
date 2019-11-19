@@ -10,7 +10,7 @@ class Avatar extends Component {
         return (
             <div className="avatar-container">
                 <div className="avatar">
-                    <img src={this.props.avatar}  className={`avatar-img  ${this.props.sender}`} />
+                    <img src={this.props.avatar}  className={`avatar-img  ${this.props.sender}`} alt=''/>
                 </div>
             </div>
         )
@@ -25,4 +25,4 @@ Avatar.defaultProps = {
     avatar: user,
   };
 
-export default Avatar;
+export default observer(Avatar);

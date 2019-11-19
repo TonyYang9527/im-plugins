@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { observer } from "mobx-react";
 import PropTypes from 'prop-types';
 import { ConnectEnum } from '../../utils/connect';
 import './style.scss';
@@ -10,7 +11,7 @@ class Status extends Component {
             return null;
         }
         return (
-            <div className="lc-status" className={`lc-status ${ConnectEnum.properties[this.props.connect].status}`} >
+            <div className={`lc-status ${ConnectEnum.properties[this.props.connect].status}`} >
                 {ConnectEnum.properties[this.props.connect].desc}
             </div>
         )
@@ -27,4 +28,4 @@ Status.defaultProps = {
     connect: ConnectEnum.CONNECTING,
 };
 
-export default Status;
+export default observer(Status);

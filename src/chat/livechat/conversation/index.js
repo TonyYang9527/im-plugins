@@ -5,18 +5,14 @@ import Messages from './message';
 import './style.scss';
 import { createTextMessage, MessageSender } from '../../utils/message';
 
-
 class Conversation extends Component {
-
     render() {
         return (<Messages messages={this.props.messages} />)
     }
 }
-
 Conversation.propTypes = {
     messages: PropTypes.array,
 };
-
 
 Conversation.defaultProps = {
     messages: [
@@ -79,4 +75,4 @@ Conversation.defaultProps = {
     ],
 };
 
-export default Conversation;
+export default  observer(Conversation);

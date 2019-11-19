@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
-import { observer } from "mobx-react";
 import PropTypes from 'prop-types';
 import './style.scss';
-
 
 class Global extends Component {
     render() {

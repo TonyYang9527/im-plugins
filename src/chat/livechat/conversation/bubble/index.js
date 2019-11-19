@@ -27,4 +27,4 @@ Bubble.propTypes = {
     ])
 };
 
-export default Bubble;
+export default observer(Bubble);

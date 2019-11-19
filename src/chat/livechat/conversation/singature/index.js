@@ -34,4 +34,4 @@ Singature.propTypes = {
 Singature.defaultProps = {
     expand: true,
 };
-export default Singature;
+export default  observer(Singature);

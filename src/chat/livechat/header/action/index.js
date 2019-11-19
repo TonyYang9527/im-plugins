@@ -17,4 +17,4 @@ Action.propTypes = {
     toggleChat: PropTypes.func.isRequired,
 };
 
-export default Action;
+export default observer(Action);

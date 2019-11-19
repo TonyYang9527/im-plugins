@@ -3,7 +3,6 @@ import { observer } from "mobx-react";
 import PropTypes from 'prop-types';
 import Singature from '../../singature';
 import './style.scss';
-import { MessagePropTypes } from '../../../../utils/message';
 
 class TextMessage extends Component {
 
@@ -18,12 +17,12 @@ class TextMessage extends Component {
                             sender={this.props.message.get('sender')}
                             expand={this.props.message.get('expand')} />
 
-                         <div className={`lc-message-bubble ${this.props.message.get('sender')}`}>
+                        <div className={`lc-message-bubble ${this.props.message.get('sender')}`}>
                             <div className="lc-message-text">
                                 <span>{this.props.message.get('text')}</span>
                             </div>
                         </div>
-                        
+
                     </div>
                 </div>
             </div>
@@ -35,4 +34,4 @@ TextMessage.propTypes = {
     message: PropTypes.object
 };
 
-export default TextMessage;
+export default observer(TextMessage);

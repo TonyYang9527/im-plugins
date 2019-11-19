@@ -1,12 +1,9 @@
 import React, { Component } from 'react';
 import { observer } from "mobx-react";
 import PropTypes from 'prop-types';
-import './style.scss';
-import Avatar from '../avatar';
-import TextMessage from './text';
 import Bubble from '../bubble';
+import './style.scss';
 
-import { createTextMessage, MessageSender } from '../../../utils/message';
 
 class Messages extends Component {
 
@@ -33,4 +30,4 @@ Messages.propTypes = {
     messages: PropTypes.array,
 };
 
-export default Messages;
+export default observer(Messages);

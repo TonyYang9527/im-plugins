@@ -56,4 +56,4 @@ LoginForm.propTypes = {
      disabledSubmit: PropTypes.bool,
 };
 
-export default LoginForm;
+export default observer(LoginForm);

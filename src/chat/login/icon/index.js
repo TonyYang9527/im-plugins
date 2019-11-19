@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import { observer } from "mobx-react";
-import PropTypes from 'prop-types';
-import './style.scss';
 import user from '../../../assets/icon/tools/user.svg';
+import './style.scss';
 
 class LoginIcon extends Component {
     render() {
@@ -15,4 +14,4 @@ class LoginIcon extends Component {
         )
     }
 }
-export default LoginIcon;
+export default observer(LoginIcon);

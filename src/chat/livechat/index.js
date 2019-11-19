@@ -6,8 +6,8 @@ import Header from './header';
 import Footer from './footer';
 import Content from './content';
 import Status from './status';
-import Login from '../login';
-import Senders from './senders';
+// import Login from '../login';
+// import Senders from './senders';
 import Conversation from './conversation';
 import { ConnectEnum } from '../utils/connect';
 import './style.scss';
@@ -62,4 +62,4 @@ Chat.defaultProps = {
     title: 'Welcome',
     connect: ConnectEnum.SUCCEED,
 };
-export default Chat;
+export default observer(Chat);

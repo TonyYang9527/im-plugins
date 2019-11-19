@@ -15,4 +15,4 @@ Title.propTypes = {
     title: PropTypes.string.isRequired
 };
 
-export default Title;
+export default observer(Title);
