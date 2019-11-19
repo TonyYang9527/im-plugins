@@ -1,31 +1,30 @@
 import React, { Component } from 'react';
 import { observer } from "mobx-react";
 import PropTypes from 'prop-types';
-import './style.scss';
-import Singature from '../singature';
 import Avatar from '../avatar';
-import TextMessage from './text';
+import './style.scss';
 
 
-
-
-class Message extends Component {
-
-
+class Bubble extends Component {
+    
     render() {
         return (
             <div className={`lc-message ${this.props.isClient ? 'client' : 'response'}`} >
                 <Avatar isClient={this.props.isClient} />
                 <div className="lc-message-bubble">
-
+                    {this.props.children}
                 </div>
             </div>
         )
     }
 }
 
-Message.propTypes = {
-    messages: PropTypes.array,
+Bubble.propTypes = {
+    isClient: PropTypes.bool,
+    children: PropTypes.oneOfType([
+        PropTypes.array,
+        PropTypes.element,
+    ])
 };
 
-export default Message;
+export default Bubble;

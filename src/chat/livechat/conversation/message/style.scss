@@ -1,22 +1,40 @@
-.lc-message {
-    display: flex;
-    margin-bottom: 1em;
-    
-    &.client {
-        flex-direction: row-reverse;
-    }
-    &.response {
-        flex-direction: row;
-    }
+
+.lc-conversation-container {
+    overflow-y: auto;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    // padding: 0.5em;
+    background: transparent;
+    overscroll-behavior: contain;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    padding-top: 0.5em;
+
 }
 
-.lc-message-bubble {
-    -webkit-box-flex: 1;
-    flex-grow: 1;
-    max-width: 100%;
-    flex-shrink: 1;
-    overflow: hidden;
-}
+// .lc-message {
+//     display: flex;
+//     margin-bottom: 1em;
+    
+//     &.client {
+//         flex-direction: row-reverse;
+//     }
+//     &.response {
+//         flex-direction: row;
+//     }
+// }
+
+// .lc-message-bubble {
+//     -webkit-box-flex: 1;
+//     flex-grow: 1;
+//     max-width: 100%;
+//     flex-shrink: 1;
+//     overflow: hidden;
+// }
 
 // .lc-message-box {
 //     display: flex;

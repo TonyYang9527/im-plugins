@@ -37,7 +37,7 @@ export const MessagePropTypes = {
 };
 
 
-export function createTextMessage(text, sender, name, date, isClient) {
+export function createTextMessage({text,sender,name, date, isClient}) {
     return Map({
         type: MessageType.TEXT,
         component: TextMessage,

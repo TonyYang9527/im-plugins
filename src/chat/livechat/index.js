@@ -15,7 +15,7 @@ import { ConnectEnum } from '../utils/connect';
 
 class Chat extends Component {
 
-    
+
     render() {
         return (
             <ChatContainer>
@@ -37,10 +37,7 @@ class Chat extends Component {
                             disabledSubmit={this.props.disabledSubmit}
                             onSubmit={this.props.onSubmit}
                         /> */}
-                        <Conversation>
-                            <Message text="I can answer 100+ most common questions. You can give me a shot or talk with one of our support heroes. We are online 24/7" isClient={true} />
-                     
-                        </Conversation>
+                        <Conversation />
                     </Content>
                     <Footer />
                 </div>

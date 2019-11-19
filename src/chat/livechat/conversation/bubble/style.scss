@@ -1,0 +1,19 @@
+.lc-message {
+    display: flex;
+    margin-bottom: 1em;
+    
+    &.client {
+        flex-direction: row-reverse;
+    }
+    &.response {
+        flex-direction: row;
+    }
+}
+
+.lc-message-bubble {
+    -webkit-box-flex: 1;
+    flex-grow: 1;
+    max-width: 100%;
+    flex-shrink: 1;
+    overflow: hidden;
+}
