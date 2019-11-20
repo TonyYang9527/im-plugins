@@ -5,14 +5,18 @@ import openLauncher from '../../assets/icon/tools/launcher_button.svg';
 import './style.scss';
 
 class Launcher extends Component {
+
     render() {
+        if (!this.props.launcherOpened) {
+            return null;
+        }
         return (
             <div className='lc-launcher'>
                 <div className='lc-container '>
                     <div className='lc-icon-container'>
                         <div className='lc-icon'>
-                            <button type="button" className='rcw-launcher-button' onClick={this.props.toggle}>
-                                <img src={openLauncher}  className="rcw-open-launcher" alt="" />
+                            <button type="button" className='rcw-launcher-button' onClick={this.props.onTouch}>
+                                <img src={openLauncher} className="rcw-open-launcher" alt="" />
                             </button>
                         </div>
                     </div>
@@ -22,6 +26,7 @@ class Launcher extends Component {
     }
 }
 Launcher.propTypes = {
-    toggle: PropTypes.func,
+    onTouch: PropTypes.func,
+    launcherOpened: PropTypes.bool,
 };
 export default observer(Launcher);

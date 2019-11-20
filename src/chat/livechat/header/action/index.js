@@ -7,14 +7,14 @@ import close from '../../../../assets/icon/tools/minus.svg';
 class Action extends Component {
     render() {
         return (<div className='lc-action'>
-            <button className="lc-action-button" onClick={this.props.toggleChat} >
+            <button className="lc-action-button" onClick={this.props.close} >
                 <img src={close} className="lc-action-icon" alt="" />
             </button>
         </div>)
     }
 }
 Action.propTypes = {
-    toggleChat: PropTypes.func.isRequired,
+    close: PropTypes.func.isRequired,
 };
 
 export default observer(Action);

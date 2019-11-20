@@ -3,14 +3,15 @@ import { ConnectEnum } from '../chat/utils/connect';
 
 
 let state = observable({
-    username: "",
+    name: "",
     email: "",
-    isAuthenticated: false,
+    isAuth: false,
     user: null,
     isSubmitting: false,
     errorMessage: "",
-    isConnect: false,
+    // isConnect: false,
     connectEnum: ConnectEnum.CONNECTING,
+    launcherOpened: true,
 });
 
 const actions = {
@@ -27,24 +28,28 @@ const actions = {
         //     state.connectEnum=ConnectEnum.FAILED,
         // });
         state.isAuthenticated = true
-        state.isConnect = true,
-        state.connectEnum=ConnectEnum.SUCCEED
+        // state.isConnect = true,
+        state.connectEnum = ConnectEnum.SUCCEED
     }),
     toggleIsSubmitting: action(() => {
         state.isSubmitting = !state.isSubmitting
     }),
 
     handleNameChange: action((value) => {
-        state.username = value
+        state.name = value
     }),
     handleEmailChange: action((value) => {
         state.email = value
     }),
 
     checkInputIsEmpty: action(() => {
-        return state.username === "" || state.email === "";
+        return state.name === "" || state.email === "";
     }),
+ 
+    onTouch: action(() => {
+        state.launcherOpened = !state.launcherOpened;
 
+    }),
 };
 
 export default { state, actions }; 

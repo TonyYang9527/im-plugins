@@ -15,10 +15,14 @@ import './style.scss';
 class Chat extends Component {
 
     render() {
+        if (this.props.launcherOpened) {
+            return null;
+        }
+
         return (
             <ChatContainer>
                 <div className='lc-widget'>
-                    <Header title={this.props.title} toggleChat={this.props.toggleChat} />
+                    <Header title={this.props.title} close={this.props.close} />
                     <Status showConnect={this.props.showConnect} connect={this.props.connect} />
                     <Content >
                         <Login
@@ -45,10 +49,11 @@ class Chat extends Component {
 Chat.propTypes = {
     isAuth: PropTypes.bool,
     title: PropTypes.string,
-    toggleChat: PropTypes.func,
+    close: PropTypes.func,
     showConnect: PropTypes.bool,
     connect: PropTypes.any,
-
+    onTouch: PropTypes.func,
+    launcherOpened: PropTypes.bool,
     name: PropTypes.string,
     email: PropTypes.string,
     onNameChanged: PropTypes.func,
@@ -59,9 +64,9 @@ Chat.propTypes = {
     errorMessage: PropTypes.string,
 };
 
-Chat.defaultProps = {
-    isAuth: true,
-    title: 'Welcome',
-    connect: ConnectEnum.SUCCEED,
-};
+// Chat.defaultProps = {
+//     isAuth: false,
+//     title: 'Welcome',
+//     connect: ConnectEnum.SUCCEED,
+// };
 export default observer(Chat);

@@ -1,26 +1,25 @@
 import React, { Component } from 'react';
+import { observer } from "mobx-react";
 import PropTypes from 'prop-types';
-import Global from './layout';
-// import Launcher from './launcher';
-import Chat from './livechat';
+import ChatApp from './ChatApp';
+
+import AuthStore from '../store/authStore';
 
 class LiveChat extends Component {
     render() {
         return (
-            <Global>
-                <div>
-                    <Chat />
-                </div>
-            </Global>
+            <ChatApp 
+             launcherOpened={AuthStore.state.launcherOpened} 
+             onTouch={AuthStore.actions.onTouch}
+             isAuth={AuthStore.state.isAuth}
+             close={AuthStore.actions.onTouch}
+             />
         )
     }
 }
 
-LiveChat.propTypes = {
-    title: PropTypes.string,
-  
-};
+// LiveChat.propTypes = {
+//     launcherOpened: PropTypes.bool,
+// };
 
-
-
-export default LiveChat;
+export default observer(LiveChat);

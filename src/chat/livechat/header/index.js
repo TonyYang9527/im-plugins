@@ -11,7 +11,7 @@ class Header extends Component {
         return (
             <div className='lc-header'>
                 <Title title={this.props.title} />
-                <Action toggleChat={this.props.toggleChat} />
+                <Action close={this.props.close} />
             </div>
         )
     }
@@ -19,11 +19,11 @@ class Header extends Component {
 
 Header.propTypes = {
     title: PropTypes.string,
-    toggleChat: PropTypes.func.isRequired,
+    close: PropTypes.func.isRequired,
 };
 
 Header.defaultProps = {
     title: ' Chat with us! ',
-    toggleChat: () => { }
+    close: () => { }
 };
 export default observer(Header);
