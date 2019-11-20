@@ -31,19 +31,35 @@ export const MessagePropTypes = {
         sender: PropTypes.oneOf([
             MessageSender.CLIENT,
             MessageSender.RESPONSE
-        ])
+        ]),
+        silbing: PropTypes.array
     }
 };
 
 
-export function createTextMessage({text,sender,name, date}) {
+export function createTextMessage({ text, sender, name, date }) {
     return Map({
         type: MessageType.TEXT,
         component: TextMessage,
         text: text,
         name: name,
         date: date,
-        showSingature :true,
-        sender:sender,
+        showSingature: true,
+        sender: sender,
+        silbing: [],
     });
 }
+
+
+export function mergeMessage(messages) {
+    let result = [];
+    let item = null;
+    let silbing = [];
+    let indx= 0;
+    messages.forEach(function (message, index) {
+        let sender = message.get("sender");
+        result.push(message)
+    })
+    return result;
+}
+
