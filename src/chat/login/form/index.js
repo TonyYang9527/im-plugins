@@ -11,14 +11,13 @@ class LoginForm extends Component {
             e.preventDefault();
             this.props.onSubmit();
         }
+        return 
     };
 
     handleNameChange = e => {
-        console.log(this.props.onNameChange)
         this.props.onNameChange(e.target.value);
     };
     handleEmailChange = e => {
-        console.log(this.props.onEmailChange)
         this.props.onEmailChange(e.target.value);
     };
 
@@ -26,7 +25,7 @@ class LoginForm extends Component {
         return (
             <div className='lc-login-form'>
                 <div className='lc-login-form-container'>
-                    <form className="lc-form" onSubmit={this.onSubmit} >
+                    <div className="lc-form"  >
                         <div className='lc-form-item'>
                             <div className='lc-form-item-container'>
                                 <label className='lc-form-item-lable'>
@@ -48,13 +47,13 @@ class LoginForm extends Component {
 
 
                         <div className='lc-form-submite'>
-                            <button type="submit" className="lc-form-sub-button" disabled={this.props.disabledSubmit} >
+                            <button className="lc-form-sub-button" onClick={this.onSubmit}  >
                                 <div className="lc-form-button-child">
                                     <span>Start Chat</span>
                                 </div>
                             </button>
                         </div>
-                    </form>
+                    </div>
                 </div>
             </div>
         )
@@ -69,7 +68,6 @@ LoginForm.propTypes = {
     onNameChange: PropTypes.func,
     onEmailChange: PropTypes.func,
     onSubmit: PropTypes.func,
-    disabledSubmit: PropTypes.bool,
 };
 
 LoginForm.defaultProps = {

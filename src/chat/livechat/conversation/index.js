@@ -19,7 +19,6 @@ Conversation.propTypes = {
 };
 
 Conversation.defaultProps = {
-    isAuth: true,
     messages: [
         createTextMessage(
             {

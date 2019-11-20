@@ -8,8 +8,8 @@ import { ConnectEnum } from './utils/connect';
 
 
 class ChatApp extends Component {
-
     render() {
+        console.log("ChatApp  render")
         return (
             <Global>
                 <Launcher
@@ -19,21 +19,16 @@ class ChatApp extends Component {
                 <Chat
                     isAuth={this.props.isAuth}
                     launcherOpened={this.props.launcherOpened}
-
                     title={this.props.title}
                     close={this.props.close}
-                   
                     connect={this.props.connect}
-
-            
                     name={this.props.name}
                     email={this.props.email}
-                    onNameChanged={this.props.onNameChanged}
-                    onEmailChanged={this.props.onEmailChanged}
+                    onNameChange={this.props.onNameChange}
+                    onEmailChange={this.props.onEmailChange}
+                    onSubmit={this.props.onSubmit}
                     showError={this.props.showError}
                     errorMessage={this.props.errorMessage}
-                    disabledSubmit={this.props.disabledSubmit}
-                    onSubmit={this.props.onSubmit}
                 />
             </Global>
 
@@ -45,7 +40,6 @@ ChatApp.propTypes = {
     launcherOpened: PropTypes.bool,
     onTouch: PropTypes.func,
 
-
     isAuth: PropTypes.bool,
     title: PropTypes.string,
     close: PropTypes.func,
@@ -54,11 +48,11 @@ ChatApp.propTypes = {
 
     name: PropTypes.string,
     email: PropTypes.string,
-    onNameChanged: PropTypes.func,
-    onEmailChanged: PropTypes.func,
+    onNameChange: PropTypes.func,
+    onEmailChange: PropTypes.func,
     onSubmit: PropTypes.func,
-    disabledSubmit: PropTypes.bool,
     showError: PropTypes.bool,
+    errorMessage: PropTypes.string,
 };
 
 ChatApp.defaultProps = {

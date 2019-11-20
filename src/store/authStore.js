@@ -9,17 +9,29 @@ let state = observable({
     user: null,
     isSubmitting: false,
     errorMessage: "",
-    // isConnect: false,
+    showError: false,
     connectEnum: ConnectEnum.CONNECTING,
     launcherOpened: true,
 });
 
 const actions = {
+
     login: action(() => {
+        if (state.name === "" || state.email === "") {
+            state.launcherOpened=false
+            state.errorMessage = 'Please enter a valid name or email'
+            state.showError = true
+           
+
+    
+        }else{
+            state.isAuth = true
+            state.connectEnum = ConnectEnum.SUCCEED
+        }
         // toggleIsSubmitting();
         // login(state.username, state.email).then(user => {
         //     state.user = user
-        //     state.isAuthenticated = true
+        //     state.isAuth = true
         //     state.connectEnum=ConnectEnum.SUCCEED,
         // }).catch(error => {
         //     state.errorMessage = "Please enter a valid username"
@@ -27,9 +39,9 @@ const actions = {
         //     state.isConnect = false,
         //     state.connectEnum=ConnectEnum.FAILED,
         // });
-        state.isAuthenticated = true
-        // state.isConnect = true,
-        state.connectEnum = ConnectEnum.SUCCEED
+
+       
+
     }),
     toggleIsSubmitting: action(() => {
         state.isSubmitting = !state.isSubmitting
@@ -45,7 +57,7 @@ const actions = {
     checkInputIsEmpty: action(() => {
         return state.name === "" || state.email === "";
     }),
- 
+
     onTouch: action(() => {
         state.launcherOpened = !state.launcherOpened;
 

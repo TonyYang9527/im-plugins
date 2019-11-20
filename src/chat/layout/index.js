@@ -8,6 +8,9 @@ class Global extends Component {
     }
 }
 Global.propTypes = {
-    children: PropTypes.element.isRequired
+    children: PropTypes.oneOfType([
+        PropTypes.array,
+        PropTypes.element,
+    ])
 };
 export default Global;

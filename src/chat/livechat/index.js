@@ -8,9 +8,7 @@ import Content from './content';
 import Status from './status';
 import Login from '../login';
 import Conversation from './conversation';
-import { ConnectEnum } from '../utils/connect';
 import './style.scss';
-
 
 class Chat extends Component {
 
@@ -29,11 +27,10 @@ class Chat extends Component {
                             isAuth={this.props.isAuth}
                             name={this.props.name}
                             email={this.props.email}
-                            onNameChanged={this.props.onNameChanged}
-                            onEmailChanged={this.props.onEmailChanged}
+                            onNameChange={this.props.onNameChange}
+                            onEmailChange={this.props.onEmailChange}
                             showError={this.props.showError}
                             errorMessage={this.props.errorMessage}
-                            disabledSubmit={this.props.disabledSubmit}
                             onSubmit={this.props.onSubmit}
                         />
                         <Conversation isAuth={this.props.isAuth} />
@@ -56,17 +53,11 @@ Chat.propTypes = {
     launcherOpened: PropTypes.bool,
     name: PropTypes.string,
     email: PropTypes.string,
-    onNameChanged: PropTypes.func,
-    onEmailChanged: PropTypes.func,
+    onNameChange: PropTypes.func,
+    onEmailChange: PropTypes.func,
     onSubmit: PropTypes.func,
-    disabledSubmit: PropTypes.bool,
     showError: PropTypes.bool,
     errorMessage: PropTypes.string,
 };
 
-// Chat.defaultProps = {
-//     isAuth: false,
-//     title: 'Welcome',
-//     connect: ConnectEnum.SUCCEED,
-// };
 export default observer(Chat);
