@@ -30,6 +30,7 @@ class ChatApp extends Component {
                     onSubmit={this.props.onSubmit}
                     showError={this.props.showError}
                     errorMessage={this.props.errorMessage}
+                    messages={this.props.messages}
                 />
             </Global>
 
@@ -54,6 +55,7 @@ ChatApp.propTypes = {
     onSubmit: PropTypes.func,
     showError: PropTypes.bool,
     errorMessage: PropTypes.string,
+    messages: PropTypes.array
 };
 
 ChatApp.defaultProps = {

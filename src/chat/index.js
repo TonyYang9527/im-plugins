@@ -4,6 +4,7 @@ import ChatApp from './ChatApp';
 
 
 class LiveChat extends Component {
+    
     render() {
         return (
             <ChatApp
@@ -20,6 +21,7 @@ class LiveChat extends Component {
                 onNameChange={this.props.authStore.actions.handleNameChange}
                 onEmailChange={this.props.authStore.actions.handleEmailChange}
                 onSubmit={this.props.authStore.actions.login}
+                messages={this.props.chatStore.state.messages}
             />
         )
     }

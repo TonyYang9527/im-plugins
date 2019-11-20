@@ -1,9 +1,6 @@
-import { observable, action, computed } from 'mobx';
-import {
-    createQuickButton, createNewMessage,
-    createLinkSnippet, createComponentMessage
-} from '../utils/messages';
-import { MESSAGE_SENDER } from '../utils/Msconstants';
+import { observable, action } from 'mobx';
+
+import { MessageSender, createTextMessage } from '../chat/utils/message';
 
 
 let state = observable({
@@ -11,22 +8,91 @@ let state = observable({
     disabledInput: false,
     msgLoader: false,
     buttons: [],
-    messages:[],
+    messages: [
+        createTextMessage(
+            {
+                text: 'I can answer 100+ most common questions. You can give me a shot or talk with one of our support heroes. We are online 24/7',
+                sender: MessageSender.CLIENT,
+                name: 'Tony',
+                date: '17:55'
+            }
+        ),
+
+        createTextMessage(
+            {
+                text: 'I can answer 100+ most common questions. You can give me a shot or talk with one of our support heroes. We are online 24/7',
+                sender: MessageSender.RESPONSE,
+                name: 'Jack', date: '17:55'
+            }
+        ),
+
+        createTextMessage(
+            {
+                text: 'I can answer 100+ most common questions. You can give me a shot or talk with one of our support heroes. We are online 24/7',
+                sender: MessageSender.RESPONSE,
+                name: 'jame', date: '17:55'
+            }
+        ),
+
+        createTextMessage(
+            {
+                text: 'I can answer 100+ most common questions. You can give me a shot or talk with one of our support heroes. We are online 24/7',
+                sender: MessageSender.RESPONSE,
+                name: 'Lily',
+                date: '17:55'
+            }
+        ),
+
+        createTextMessage(
+            {
+                text: 'I can answer 100+ most common questions. You can give me a shot or talk with one of our support heroes. We are online 24/7',
+                sender: MessageSender.CLIENT,
+                name: 'yangxiangjiang',
+                date: '17:55'
+            }
+        ),
+
+        createTextMessage(
+            {
+                text: 'I can answer 100+ most common questions. You can give me a shot or talk with one of our support heroes. We are online 24/7',
+                sender: MessageSender.RESPONSE,
+                name: 'yangxiangjiang',
+                date: '17:55'
+            }
+        ),
+
+        createTextMessage(
+            {
+                text: 'I can answer 100+ most common questions. You can give me a shot or talk with one of our support heroes. We are online 24/7',
+                sender: MessageSender.RESPONSE,
+                name: 'yangxiangjiang',
+                date: '17:55'
+            }
+        ),
+
+    ],
 });
 
 const actions = {
 
-    addUserMessage: action((text) => {
-        state.messages.push(createNewMessage(text, MESSAGE_SENDER.CLIENT))
-        console.log("addUserMessage ",createNewMessage(text, MESSAGE_SENDER.CLIENT))
+    addTextMessage: action((text) => {
+        state.messages.push(
+            {
+                text: text,
+                sender: MessageSender.CLIENT,
+                name: 'Tony',
+                date: '17:55'
+            }
+        )
     }),
 
     addResponseMessage: action((text) => {
-        state.messages.push(createNewMessage(text, MESSAGE_SENDER.RESPONSE))
-    }),
-
-    addLinkSnippet: action((link) => {
-        state.messages.push(createLinkSnippet(link, MESSAGE_SENDER.RESPONSE))
+        state.messages.push(createTextMessage({
+            text: text,
+            sender: MessageSender.RESPONSE,
+            name: 'Yangxj',
+            date: '18:55'
+        }))
     }),
 
 
@@ -34,30 +100,13 @@ const actions = {
         state.msgLoader = !state.msgLoader;
     }),
 
-    renderCustomComponent: action((component, props, showAvatar = false) => {
-        state.messages.push(createComponentMessage(component, props, showAvatar))
-    }),
-
-    toggleWidget: action(() => {
-        state.showChat = !state.showChat;
-        console.log("toggleWidget",  state.showChat)
-    }),
-
     toggleInputDisabled: action(() => {
         state.disabledInput = !state.disabledInput;
     }),
 
     dropMessages: action(() => {
-          state.messages =[];
+        state.messages = [];
     }),
-
-    isWidgetOpened: computed(() => {
-        return state.showChat;
-    }),
-    
-    setQuickButtons: action((buttons) => {
-        state.buttons = buttons.map(button => createQuickButton(button))
-    })
 
 };
 

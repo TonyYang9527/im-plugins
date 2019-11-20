@@ -3,7 +3,7 @@ import { observer } from "mobx-react";
 import PropTypes from 'prop-types';
 import Bubble from '../bubble';
 import './style.scss';
-import {mergeMessage} from '../../../utils/message';
+
 class Messages extends Component {
 
 
@@ -17,9 +17,7 @@ class Messages extends Component {
         )
     };
 
-
     render() {
-          console.log(mergeMessage(this.props.messages))
         return (
             <div className='lc-conversation-container'>
                 {this.props.messages.map((message, index) => this.ComponentRender(message, index))}

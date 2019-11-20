@@ -31,8 +31,7 @@ export const MessagePropTypes = {
         sender: PropTypes.oneOf([
             MessageSender.CLIENT,
             MessageSender.RESPONSE
-        ]),
-        silbing: PropTypes.array
+        ])
     }
 };
 
@@ -45,21 +44,7 @@ export function createTextMessage({ text, sender, name, date }) {
         name: name,
         date: date,
         showSingature: true,
-        sender: sender,
-        silbing: [],
+        sender: sender
     });
+    
 }
-
-
-export function mergeMessage(messages) {
-    let result = [];
-    let item = null;
-    let silbing = [];
-    let indx= 0;
-    messages.forEach(function (message, index) {
-        let sender = message.get("sender");
-        result.push(message)
-    })
-    return result;
-}
-

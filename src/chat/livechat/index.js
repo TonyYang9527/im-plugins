@@ -33,7 +33,9 @@ class Chat extends Component {
                             errorMessage={this.props.errorMessage}
                             onSubmit={this.props.onSubmit}
                         />
-                        <Conversation isAuth={this.props.isAuth} />
+                        <Conversation
+                            isAuth={this.props.isAuth}
+                            messages={this.props.messages}  />
                     </Content>
                     <Footer />
                 </div>
@@ -58,6 +60,8 @@ Chat.propTypes = {
     onSubmit: PropTypes.func,
     showError: PropTypes.bool,
     errorMessage: PropTypes.string,
+
+    messages: PropTypes.array,
 };
 
 export default observer(Chat);
