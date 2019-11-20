@@ -13,6 +13,8 @@ class LiveChat extends Component {
                 close={this.props.authStore.actions.onTouch}
                 name={this.props.authStore.state.name}
                 email={this.props.authStore.state.email}
+                connect={this.props.authStore.state.connect}
+                showConnect={this.props.authStore.state.showConnect}
                 errorMessage={this.props.authStore.state.errorMessage}
                 showError={this.props.authStore.state.showError}
                 onNameChange={this.props.authStore.actions.handleNameChange}

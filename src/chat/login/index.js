@@ -45,8 +45,8 @@ Login.propTypes = {
 };
 
 Login.defaultProps = {
-    isAuth: true,
-    showError: false,
+    // isAuth: true,
+    // showError: false,
     onNameChange:(value)=>{},
     onEmailChange:(value)=>{},
     onSubmit: ()=>{}

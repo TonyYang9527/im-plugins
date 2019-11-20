@@ -10,7 +10,8 @@ let state = observable({
     isSubmitting: false,
     errorMessage: "",
     showError: false,
-    connectEnum: ConnectEnum.CONNECTING,
+    connect: ConnectEnum.CONNECTING,
+    showConnect :false,
     launcherOpened: true,
 });
 
@@ -18,15 +19,14 @@ const actions = {
 
     login: action(() => {
         if (state.name === "" || state.email === "") {
-            state.launcherOpened=false
             state.errorMessage = 'Please enter a valid name or email'
             state.showError = true
-           
-
-    
         }else{
+            state.errorMessage =  ""
+            state.showError = false
             state.isAuth = true
-            state.connectEnum = ConnectEnum.SUCCEED
+            state.connect = ConnectEnum.SUCCEED
+            state.showConnect=true
         }
         // toggleIsSubmitting();
         // login(state.username, state.email).then(user => {

@@ -22,6 +22,7 @@ class ChatApp extends Component {
                     title={this.props.title}
                     close={this.props.close}
                     connect={this.props.connect}
+                    showConnect={this.props.showConnect}
                     name={this.props.name}
                     email={this.props.email}
                     onNameChange={this.props.onNameChange}

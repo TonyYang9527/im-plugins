@@ -7,11 +7,8 @@ import './style.scss';
 class LoginForm extends Component {
 
     onSubmit = e => {
-        if (this.props.name !== "" && this.props.email !== "") {
-            e.preventDefault();
-            this.props.onSubmit();
-        }
-        return 
+        e.preventDefault();
+        this.props.onSubmit();
     };
 
     handleNameChange = e => {
