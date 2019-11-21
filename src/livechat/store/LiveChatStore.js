@@ -11,7 +11,7 @@ let state = observable({
     disabledInput: false,
     msgLoader: false,
     buttons: [],
-    messages:[],
+    messages: [],
 });
 
 const actions = {

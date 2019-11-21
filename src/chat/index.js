@@ -21,7 +21,7 @@ class LiveChat extends Component {
                 onNameChange={this.props.authStore.actions.handleNameChange}
                 onEmailChange={this.props.authStore.actions.handleEmailChange}
                 onSubmit={this.props.authStore.actions.login}
-                messages={this.props.chatStore.state.messages}
+                messages={this.props.chatStore.state.messages.slice()}
             />
         )
     }

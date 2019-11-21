@@ -26,7 +26,9 @@ class Conversation extends Component {
                     (<Login store={LoginStore} />) :
                     (
                         <div>
-                            <Messages store={this.props.store} profileAvatar={this.props.profileAvatar} />
+                            <Messages 
+                            store={this.props.store} 
+                            profileAvatar={this.props.profileAvatar} />
                             <QuickButtons store={this.props.store} onQuickButtonClicked={this.props.onQuickButtonClicked} />
                             <Sender store={this.props.store} sendMessage={this.props.sendMessage}
                                 placeholder={this.props.senderPlaceHolder}

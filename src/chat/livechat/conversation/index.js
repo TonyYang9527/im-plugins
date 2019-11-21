@@ -13,7 +13,6 @@ class Conversation extends Component {
     }
 }
 Conversation.propTypes = {
-
     isAuth: PropTypes.bool,
     messages: PropTypes.array,
 };
