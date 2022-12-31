@@ -39,7 +39,7 @@
     "babel-preset-stage-0": "^6.24.1",
     "babel-runtime": "^6.26.0",
     "classnames": "^2.2.6",
-    "flat": "^1.2.1",
+    "flat": "^5.0.1",
     "http-proxy-middleware": "^0.20.0",
     "immutable": "^3.7.4",
     "inferno": "3.x",
